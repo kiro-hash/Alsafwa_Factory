@@ -7,7 +7,23 @@
   "export": "Export",
   "contact": "Contact Us",
 
-  "_2comment":"hero",
-  "heroheader":"AL SAFWA FACTORY",
-  "herodesc":"Crafting premium, farm-fresh cheese with traditional expertise and uncompromising quality—bringing authentic flavor to every table."
+  "_2comment": "hero",
+  "heroheader": "AL SAFWA FACTORY",
+  "herodesc": "Crafting premium, farm-fresh cheese with traditional expertise and uncompromising quality—bringing authentic flavor to every table.",
+
+  "_3comment": "herobtns",
+  "productsbtn": "Explore Our Products",
+
+  "_4comment": "achv",
+  "t01": "50+",
+  "t02": "Years",
+  "t03": "Experience",
+
+  "t11": "150+",
+  "t22": "Retail",
+  "t33": "Partners",
+
+  "t111": "100%",
+  "t222": "Fresh",
+  "t333":"Cheese"
 }

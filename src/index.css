@@ -4,7 +4,7 @@
   --bg: #FAFFFB;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
-  --accent: #aa3bff;
+  --accent: #15944E;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
@@ -23,3 +23,53 @@ body{
 }
 
 
+.darkbtn{
+  background-color: var(--accent);
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: var(--bg);
+  text-decoration: none;
+}
+.lightbtn{
+  background-color: var(--bg);
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: var(--text);
+  text-decoration: none;
+}
+.glasseffect {
+    width: 25%;
+    height: 100px;
+    margin-top: 20px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 35px;
+
+    /* Glass */
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* Border */
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+
+    /* Soft shadow */
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 1px 1px rgba(255, 255, 255, 0.08);
+
+    color: white;
+    text-align: center;
+}
+
+.glasseffect p {
+    font-weight: 900;
+    margin: 0;
+    line-height: 1;
+    font-size: larger;
+}
