@@ -1,8 +1,13 @@
 {
-  "welcome": "Welcome to our website",
+  "_1comment": "Nav",
   "home": "Home",
-  "about": "About",
-  "contact": "Contact",
-  "services": "Services",
-  "change_language": "Change Language"
+  "about": "About Us",
+  "branches": "Branches",
+  "products": "Products",
+  "export": "Export",
+  "contact": "Contact Us",
+
+  "_2comment":"hero",
+  "heroheader":"AL SAFWA FACTORY",
+  "herodesc":"Crafting premium, farm-fresh cheese with traditional expertise and uncompromising quality—bringing authentic flavor to every table."
 }
