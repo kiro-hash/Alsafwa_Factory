@@ -1,52 +1,56 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
-import "./styles/Footer.css";
-
+import logo from '../assets/logo.png'
+import './styles/Footer.css'
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-brand">
           <img src={logo} alt="Al Safwa logo" />
-          <h3>Al Safwa</h3>
-          <p>Taste the Highest Quality... Honesty in Every Deal.</p>
+          <h3>{t("footerBrand")}</h3>
+          <p>{t("footerDesc")}</p>
         </div>
 
         <div className="footer-col">
-          <h4>Navigation</h4>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/products">Products</Link>
-          <Link to="/export">Export</Link>
-          <Link to="/branches">Branches</Link>
+          <h4>{t("footerNav")}</h4>
+          <Link to="/">{t("home")}</Link>
+          <Link to="/about">{t("about")}</Link>
+          <Link to="/products">{t("products")}</Link>
+          <Link to="/export">{t("export")}</Link>
+          <Link to="/branches">{t("branches")}</Link>
         </div>
 
         <div className="footer-col">
-          <h4>Follow Us</h4>
-          <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">Twitter X</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">Threads</a>
+          <h4>{t("footerFollow")}</h4>
+          <a href="#">{t("facebook")}</a>
+          <a href="#">{t("instagram")}</a>
+          <a href="#">{t("twitter")}</a>
+          <a href="#">{t("threads")}</a>
         </div>
 
         <div className="footer-col">
-          <h4>Contact Us</h4>
-          <a href="#">Contact Via WhatsApp</a>
-          <a href="#">Send Now</a>
+          <h4>{t("footerContact")}</h4>
+          <a href="#">{t("whatsapp")}</a>
+          <a href="#">{t("sendNow")}</a>
         </div>
 
         <div className="footer-col">
-          <h4>Join Us</h4>
-          <a href="#">Be from our partners</a>
-          <a href="#">Join Now</a>
+          <h4>{t("footerJoin")}</h4>
+          <a href="#">{t("partners")}</a>
+          <a href="#">{t("joinNow")}</a>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Al Safwa Processed Cheese Factory. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} {t("copyright")}
+        </p>
       </div>
     </footer>
   );
 };
 
-export default Footer;
+export default Footer
