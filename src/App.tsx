@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import Home from './pages/Home'
+import About from './pages/About';
+
 function App() {
     const { i18n } = useTranslation();
   useEffect(() => {
@@ -15,6 +17,7 @@ function App() {
     <BrowserRouter>
       <Routes>
       <Route path='/' element={<Home/>}/>
+      <Route path='/about' element={<About/>}/>
       </Routes>
     </BrowserRouter>
   )

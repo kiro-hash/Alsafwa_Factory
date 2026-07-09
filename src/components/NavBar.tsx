@@ -2,6 +2,7 @@ import {Link} from "react-router-dom"
 import { useTranslation } from "react-i18next";
 import logo from "../assets/logo.png"
 import './styles/NavBar.css'
+
 const NavBar = () => {
   const {t} = useTranslation();
   return (
@@ -10,7 +11,7 @@ const NavBar = () => {
         <img src={logo} alt="logo" />
         <div className="links">
           <Link className="navlink" to="/">{t("home")}</Link>
-          <Link className="navlink" to="/about">{t("about")}</Link>
+          <Link className="navlink" to="/about">{t("About")}</Link>
           <Link className="navlink" to="/branches">{t("branches")}</Link>
           <Link className="navlink" to="/products">{t("products")}</Link>
           <Link className="navlink" to="/export">{t("export")}</Link>
