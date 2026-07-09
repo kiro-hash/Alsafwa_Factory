@@ -25,5 +25,48 @@
 
   "t111": "100%",
   "t222": "Fresh",
-  "t333":"Cheese"
+  "t333": "Cheese",
+
+  
+  "_6comment": "About Page",
+
+  "aboutEyebrow": "Since 1984",
+  "aboutTitle": "About Al Safwa",
+
+  "aboutP1": "Al Safwa Processed Cheese Factory is a fully integrated dairy manufacturing company operating across various sectors of the dairy industry. Since its establishment in 1984, the factory has become a leading name in dairy production, utilizing the latest Italian production technologies specialized in manufacturing a wide range of processed cheese products. Over the years, the factory has earned a strong reputation for consistently delivering products of exceptional quality.",
+
+  "aboutP2": "Thanks to our key competitive strengths—high product quality, customer satisfaction, and competitive pricing—we have successfully built strong and lasting trust with our customers throughout our many years of experience.",
+
+  "aboutP3": "Today, our products are widely distributed across the Egyptian market, where they enjoy a strong market presence and significant market share while maintaining competitive prices. In addition, we export to various Arab and African markets as part of our carefully planned and implemented sales strategy. This strategy allows us to maximize our high production capacity and take full advantage of our factory's advanced manufacturing capabilities.",
+
+  "certTitle": "Since product quality and food safety are among our highest priorities, our factory has been awarded the following internationally recognized quality and food safety certifications:",
+
+  "iso9001": "Quality Management System",
+  "iso18001": "Occupational Health and Safety Management System",
+  "iso22000": "(HACCP) – Food Safety Management System",
+
+  "aboutSlogan": "Taste the Highest Quality... Honesty in Every Deal.",
+
+
+  "_5comment": "Footer",
+  "footerBrand": "Al Safwa",
+  "footerDesc": "Taste the Highest Quality... Honesty in Every Deal.",
+
+  "footerNav": "Navigation",
+
+  "footerFollow": "Follow Us",
+  "facebook": "Facebook",
+  "instagram": "Instagram",
+  "twitter": "Twitter X",
+  "threads": "Threads",
+
+  "footerContact": "Contact Us",
+  "whatsapp": "Contact Via WhatsApp",
+  "sendNow": "Send Now",
+
+  "footerJoin": "Join Us",
+  "partners": "Be from our partners",
+  "joinNow": "Join Now",
+
+  "copyright": "Al Safwa Processed Cheese Factory. All rights reserved."
 }

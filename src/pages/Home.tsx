@@ -4,20 +4,15 @@ import NavBar from "../components/NavBar";
 import './styles/Home.css'
 import { Link } from "react-router-dom";
 import GlassBoxHero from "../components/GlassBoxHero";
+import Footer from "../components/Footer";
+import LangBtn from "../components/LangBtn";
 
 const Home = () => {
-  const { t, i18n } = useTranslation();
-  const changeLanguage = () => {
-    const newLang = i18n.language === "en" ? "ar" : "en";
-    i18n.changeLanguage(newLang);
-    localStorage.setItem("lang", newLang);
-  };
+  const { t } = useTranslation();
 
   return (
     <>
-      <button onClick={changeLanguage}>
-        {i18n.language === "en" ? "العربية" : "English"}
-      </button>
+      <LangBtn/>
       <NavBar/>
       <div className="hero">
         <img src={heroimg} alt="heroimg" />
@@ -36,6 +31,7 @@ const Home = () => {
         </div>
         
       </div>
+      <Footer/>
     </>
   );
 };

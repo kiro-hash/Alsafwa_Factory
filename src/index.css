@@ -41,6 +41,7 @@ body{
     width: 25%;
     height: 100px;
     margin-top: 20px;
+    cursor: pointer;
 
 
     display: flex;
@@ -72,4 +73,19 @@ body{
     margin: 0;
     line-height: 1;
     font-size: larger;
+}
+
+
+.langbtn{
+  position: fixed;
+  top: 100px;
+  padding: 20px;
+  font-size: large;
+  border-radius: 50%;
+  border: none;
+  width: 60px;
+  inset-inline-start: 1%;
+  background-color: var(--accent);
+  color: var(--bg);
+  z-index: 3;
 }
