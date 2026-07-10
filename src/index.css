@@ -78,14 +78,15 @@ body{
 
 .langbtn{
   position: fixed;
-  top: 100px;
-  padding: 20px;
+  top: 15px;
+  padding: 15px;
   font-size: large;
   border-radius: 50%;
   border: none;
-  width: 60px;
+  width: 50px;
   inset-inline-start: 1%;
   background-color: var(--accent);
   color: var(--bg);
   z-index: 3;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.525);
 }
