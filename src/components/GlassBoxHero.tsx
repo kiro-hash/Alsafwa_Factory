@@ -16,3 +16,4 @@ const GlassBoxHero = ({t1,t2,t3}:texts) => {
 }
 
 export default GlassBoxHero
+
