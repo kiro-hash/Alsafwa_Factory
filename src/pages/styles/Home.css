@@ -1,61 +1,544 @@
-.hero {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+/* =========================================================
+   Home page — brand tokens (fallbacks; override in your
+   global theme file if you already define these)
+   ========================================================= */
+.home {
+  --green: var(--brand-green, #1c7a4a);
+  --green-dark: var(--brand-green-dark, #14572f);
+  --navy: var(--brand-navy, #0d2233);
+  --ink: var(--brand-ink, #16241d);
+  --muted: var(--brand-muted, #5b6b63);
+  --radius-lg: 40px;
+  --radius-md: 24px;
+  background: #fafdfb;
+  overflow-x: hidden;
 }
 
+.home section h2 {
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 800;
+  color: var(--ink);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.home .eyebrow {
+  display: block;
+  color: var(--green);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.home .eyebrow-light {
+  color: #6fe3a4;
+}
+
+/* Language toggle — fixed green circle on the side, vertically centered */
+.lang-fab {
+  position: fixed;
+  top: 50%;
+  inset-inline-end: 20px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(13, 34, 51, 0.25);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.lang-fab:hover {
+  background: var(--green-dark);
+  transform: translateY(-50%) scale(1.06);
+}
+
+@media (max-width: 800px) {
+  .lang-fab {
+    width: 44px;
+    height: 44px;
+    font-size: 0.9rem;
+    inset-inline-end: 14px;
+  }
+}
+
+/* Buttons shared across sections */
+.home .btn,
+.home .darkbtn,
+.home .lightbtn {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease;
+}
+.home .btn:hover,
+.home .darkbtn:hover,
+.home .lightbtn:hover {
+  transform: translateY(-2px);
+}
+.home .btn-primary,
+.home .darkbtn {
+  background: var(--green);
+  color: #fff;
+}
+.home .btn-primary:hover,
+.home .darkbtn:hover {
+  background: var(--green-dark);
+}
+.home .btn-outline,
+.home .lightbtn {
+  background: transparent;
+  color: var(--bg, #fff);
+  border: 2px solid var(--bg, #fff);
+}
+
+/* =========================================================
+   Hero
+   ========================================================= */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
 
 .herotext {
-    position: absolute;
-    z-index: 2;
-    inset-inline-start: 8%; /* replaces left */
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--bg);
-    max-width: 650px;
+  position: absolute;
+  z-index: 2;
+  inset-inline-start: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--bg, #fff);
+  max-width: 650px;
 }
 
 .herotext h1 {
-    font-size: clamp(3rem, 5vw, 5rem);
-    line-height: 1;
-    margin-bottom: 20px;
-    font-weight: 700;
+  font-size: clamp(1.8rem, 4.2vw, 5rem);
+  line-height: 1;
+  margin-bottom: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
-.herotext p{
-    font-weight: bold;
-    font-size: large;
+.herotext p {
+  font-weight: 600;
+  font-size: large;
+  margin-bottom: 24px;
+  max-width: 480px;
 }
 
-
-/* Default (English) */
 .hero img {
-    width: 90%;
-    height: 85vh;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 40px;
-    display: block;
-    transform: scaleX(1);
+  width: 90%;
+  height: 85vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-lg);
+  display: block;
+  transform: scaleX(1);
 }
 
-/* Arabic */
 html[dir="rtl"] .hero img {
-    transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
-.herobtns{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 50%;
-    gap: 15px;
+.herobtns {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: auto;
+  flex-wrap: nowrap;
+  gap: 15px;
 }
 
-.achv{
-    display: flex;
-    justify-content: start;
+/* Three glass stat cards, sitting right below the hero buttons */
+.achv {
+  display: flex;
+  gap: 14px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+
+.glasseffect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  box-shadow: 0 10px 40px rgba(13, 34, 51, 0.15);
+  flex: 1 1 160px;
+}
+
+.glasseffect p {
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+/* =========================================================
+   Partners row
+   ========================================================= */
+.partners-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  padding: 50px 8% 30px;
+}
+
+.partner-logo {
+  height: 68px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.partner-logo:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   Products — one photo, a 3x2 grid of "View Details" tags
+   over it, and a vertical "SEE MORE" tab on the right edge
+   ========================================================= */
+.products-section {
+  padding: 40px 8% 90px;
+  text-align: center;
+}
+
+.products-showcase {
+  position: relative;
+  max-width: 1100px;
+  margin: 30px auto 0;
+  height: 65vh;
+  min-height: 420px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+}
+
+.products-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.products-tags-grid {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.products-tag-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.view-details {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.78rem;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(13, 34, 51, 0.35);
+}
+
+.view-details:hover {
+  background: var(--green-dark);
+}
+
+.see-more {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.see-more:hover {
+  background: var(--green-dark);
+}
+
+/* =========================================================
+   Why Us
+   ========================================================= */
+.whyus-section {
+  padding: 20px 8% 90px;
+}
+
+.whyus-top {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 24px auto 40px;
+  flex-wrap: wrap;
+}
+
+.whyus-copy {
+  flex: 1 1 380px;
+}
+
+.whyus-desc {
+  color: var(--muted);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.whyus-photo {
+  flex: 1 1 320px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 260px;
+}
+
+.whyus-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.whyus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.whyus-card {
+  background: #f6f8f6;
+  border-radius: var(--radius-md);
+  padding: 24px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.whyus-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.whyus-card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+
+.whyus-card p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================================================
+   Exporting — compact rounded dark card (matches the original
+   mock), photo beside the text + 3 feature lines
+   ========================================================= */
+.countries-card {
+  max-width: 1100px;
+  margin: 0 auto 90px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 8%;
+  border-radius: var(--radius-lg);
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.countries-text {
+  flex: 1 1 280px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* .countries-text span {
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: start;
+  margin-bottom: 18px;
+} */
+
+.countries-text h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: start;
+  margin-bottom: 18px;
+}
+
+.countries-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.countries-stats p {
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.countries-photo {
+  position: relative;
+  border-radius: 20px;
+
+  flex: 1 1 320px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 240px;
+}
+
+.countries-photo img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 900px) {
+  .hero img {
+    height: 60vh;
+  }
+  .herotext {
+    inset-inline-start: 6%;
+    max-width: 85%;
+  }
+  .herotext h1 {
+    font-size: clamp(1.4rem, 6vw, 2.8rem);
+    white-space: normal;
+  }
+  .herotext p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .herobtns {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  .achv {
+    flex-direction: column;
+  }
+  .glasseffect {
+    width: 100%;
+  }
+  .products-showcase {
+    height: 55vh;
+  }
+  .view-details {
+    padding: 6px 10px;
+    font-size: 0.65rem;
+  }
+  .see-more {
+    flex-basis: 36px;
+    font-size: 0.7rem;
+  }
+  .whyus-grid {
+    grid-template-columns: 1fr;
+  }
+  .countries-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 6%;
+  }
+  .countries-text h2 {
+    text-align: center;
+  }
+  .countries-stats {
     align-items: center;
-    gap: 15px;
+  }
 }
