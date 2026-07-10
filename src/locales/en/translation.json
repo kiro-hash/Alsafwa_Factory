@@ -89,5 +89,39 @@
   "partners": "Be from our partners",
   "joinNow": "Join Now",
 
-  "copyright": "Al Safwa Processed Cheese Factory. All rights reserved."
+  "copyright": "Al Safwa Processed Cheese Factory. All rights reserved.",
+
+
+  "_8comment": "Home - Products",
+
+"productstitle": "Our Products",
+"productssubtitle": "Premium cheese made with the highest quality standards.",
+"viewdetails": "View Details",
+"seemore": "See More",
+
+"_9comment": "Home - Why Us",
+
+"whyustitle": "Why Choose Al Safwa?",
+"whyusdesc": "At Al Safwa Factory, quality is more than a promise—it's the foundation of everything we do. From carefully selecting premium ingredients to applying advanced manufacturing techniques, we are committed to producing processed cheese that delivers exceptional taste, consistent quality, and complete customer satisfaction.",
+
+"quality1title": "Premium Quality",
+"quality1desc": "Produced from carefully selected ingredients using strict quality standards to ensure the finest taste in every bite.",
+
+"quality2title": "Advanced Manufacturing",
+"quality2desc": "Our modern production lines use the latest Italian technology to deliver consistent quality and high production efficiency.",
+
+"quality3title": "Food Safety",
+"quality3desc": "Every product is manufactured under internationally recognized food safety and quality management systems.",
+
+"quality4title": "Customer Satisfaction",
+"quality4desc": "For over 40 years, we have earned the trust of customers by delivering products they can rely on every day.",
+
+"_10comment": "Home - Export",
+
+"exporting": "Exporting",
+"exportingdesc": "Proudly Exporting to Multiple Countries",
+
+"feature1": "International Quality Standards",
+"feature2": "Reliable & Fast Shipping",
+"feature3": "Serving Arab & African Markets"
 }

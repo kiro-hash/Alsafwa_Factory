@@ -35,43 +35,6 @@
   color: #6fe3a4;
 }
 
-/* Language toggle — fixed green circle on the side, vertically centered */
-.lang-fab {
-  position: fixed;
-  top: 50%;
-  inset-inline-end: 20px;
-  transform: translateY(-50%);
-  z-index: 1000;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  border: none;
-  background: var(--green);
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.05rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 30px rgba(13, 34, 51, 0.25);
-  transition: background 0.15s ease, transform 0.15s ease;
-}
-
-.lang-fab:hover {
-  background: var(--green-dark);
-  transform: translateY(-50%) scale(1.06);
-}
-
-@media (max-width: 800px) {
-  .lang-fab {
-    width: 44px;
-    height: 44px;
-    font-size: 0.9rem;
-    inset-inline-end: 14px;
-  }
-}
-
 /* Buttons shared across sections */
 .home .btn,
 .home .darkbtn,
@@ -168,7 +131,7 @@ html[dir="rtl"] .hero img {
   display: flex;
   gap: 14px;
   margin-top: 26px;
-  flex-wrap: wrap;
+
 }
 
 .glasseffect {
@@ -419,12 +382,7 @@ html[dir="rtl"] .hero img {
   z-index: 1;
 }
 
-/* .countries-text span {
-  font-size: 2rem;
-  color: #ffffff;
-  text-align: start;
-  margin-bottom: 18px;
-} */
+
 
 .countries-text h3 {
   font-size: 1.5rem;

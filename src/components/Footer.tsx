@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import logo from "../assets/logo.png";
-import "./styles/Footer.css";
-
+import { Link } from "react-router-dom";
+import logo from '../assets/logo.png'
+import './styles/Footer.css'
 const Footer = () => {
   const { t } = useTranslation();
 
@@ -26,30 +25,32 @@ const Footer = () => {
 
         <div className="footer-col">
           <h4>{t("footerFollow")}</h4>
-          <a href="#" target="_blank" rel="noreferrer">Facebook</a>
-          <a href="#" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="#" target="_blank" rel="noreferrer">Twitter / X</a>
-          <a href="#" target="_blank" rel="noreferrer">{t("products")}</a>
+          <a href="#">{t("facebook")}</a>
+          <a href="#">{t("instagram")}</a>
+          <a href="#">{t("twitter")}</a>
+          <a href="#">{t("threads")}</a>
         </div>
 
         <div className="footer-col">
           <h4>{t("footerContact")}</h4>
-          <a href="#">{t("footerContactWhatsapp")}</a>
-          <a href="#">{t("footerSendMessage")}</a>
+          <a href="#">{t("whatsapp")}</a>
+          <a href="#">{t("sendNow")}</a>
         </div>
 
         <div className="footer-col">
           <h4>{t("footerJoin")}</h4>
-          <a href="#">{t("footerBecomePartner")}</a>
-          <a href="#">{t("footerJoinNow")}</a>
+          <a href="#">{t("partners")}</a>
+          <a href="#">{t("joinNow")}</a>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>{t("footerCopyright", { year: new Date().getFullYear() })}</p>
+        <p>
+          © {new Date().getFullYear()} {t("copyright")}
+        </p>
       </div>
     </footer>
   );
 };
 
-export default Footer;
+export default Footer
