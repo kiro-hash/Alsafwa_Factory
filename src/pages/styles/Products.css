@@ -1,0 +1,16 @@
+.pcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 70px;
+}
+.mproducts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.product img{
+    width: 250px;
+}

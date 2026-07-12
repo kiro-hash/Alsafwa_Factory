@@ -5,7 +5,7 @@
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #15944E;
-  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-bg: #A8D9BE;
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
@@ -98,7 +98,8 @@ body{
 }
 
 .langbtn:hover {
-  background: var(--green-dark);
+  background: var(--accent-bg);
+  color: var(--text);
   transform: translateY(-50%) scale(1.06);
 }
 
