@@ -1,16 +1,151 @@
-.pcontainer{
+.pcontainer {
+    max-width: 1400px;
+    margin: 80px auto 60px;
+    padding: 20px 40px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 100px;
-    padding: 70px;
+    justify-content: center;
+    gap: 70px;
 }
-.mproducts{
+
+/* ---------- LEFT MENU ---------- */
+
+.menu {
+    width: 260px;
+    padding: 22px 18px;
+    background: var(--accent);
+    border-radius: 28px;
+    flex-shrink: 0;
+}
+
+.menu h1 {
+    text-align: center;
+    color: var(--bg);
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+
+.mproducts {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    gap: 10px;
 }
-.product img{
+
+.mproducts button {
+    width: 100%;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 40px;
+    background: var(--accent-bg);
+    color: var(--text);
+    cursor: pointer;
+    transition: .25s;
+}
+
+.mproducts button h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.mproducts button:hover {
+    transform: translateX(5px);
+}
+
+.mproducts button.active {
+    background: var(--green);
+    color: white;
+}
+
+/* ---------- PRODUCT ---------- */
+
+.product {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-top {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.product img {
     width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+}
+
+.product-info h2 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: var(--text);
+}
+
+.order-btn {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 50px;
+    background: var(--accent-bg);
+    color: var(--text);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.order-btn:hover {
+    background: var(--primary-CTA);
+    color: var(--primary-CTA-text);
+}
+
+.product p {
+    margin-top: 35px;
+    max-width: 700px;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 992px) {
+    .pcontainer {
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .menu {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .product-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .product-info {
+        align-items: center;
+    }
+
+    .product img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .product p {
+        text-align: center;
+        margin-top: 20px;
+    }
 }

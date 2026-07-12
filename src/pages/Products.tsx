@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import Footer from "../components/Footer";
 import LangBtn from "../components/LangBtn";
 import NavBar from "../components/NavBar";
-import "./styles/Products.css"
+import "./styles/Products.css";
 
 import products from "../Data/Products";
 
@@ -34,11 +34,23 @@ const Products = () => {
         </div>
 
         <div className="product">
-          <img
-            src={products[selectedIndex].productImg}
-            alt={t(products[selectedIndex].productName)}
-          />
-          <h3>{t(products[selectedIndex].productName)}</h3>
+          <div className="product-top">
+            <img
+              src={products[selectedIndex].productImg}
+              alt={t(products[selectedIndex].productName)}
+            />
+
+            <div className="product-info">
+              <h2>
+                {t(products[selectedIndex].productName)}
+              </h2>
+
+              <button className="order-btn">
+                {t("orderNow")}
+              </button>
+            </div>
+          </div>
+
           <p>{t(products[selectedIndex].productDesc)}</p>
         </div>
       </div>
