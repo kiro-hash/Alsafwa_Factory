@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
+import Export from "./pages/Export";
 
 function App() {
   const { i18n } = useTranslation();
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/export" element={<Export/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -111,3 +111,19 @@ body{
     inset-inline-end: 14px;
   }
 }
+
+.circle {
+    width: 70px;
+    height: 70px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.circle img {
+    width: 34px;
+    height: 34px;
+}
