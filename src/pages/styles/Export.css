@@ -1,0 +1,68 @@
+.export {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    min-height: 100vh;
+    background: var(--bg);
+}
+
+.export > img {
+    width: 78%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.row {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background: var(--accent-bg);
+    padding: 20px 30px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+.row p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.row a {
+    text-decoration: none;
+    background: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.row a:hover {
+    transform: translateY(-2px);
+    opacity: .9;
+}
+
+@media (max-width: 768px) {
+    .export > img {
+        width: 95%;
+    }
+
+    .row {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .row p {
+        font-size: 1rem;
+    }
+}
