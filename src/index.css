@@ -127,3 +127,23 @@ body{
     width: 34px;
     height: 34px;
 }
+
+.leaflet-container {
+    width: 90%;
+    height: 650px;
+    border-radius: 25px;
+}
+
+.leaflet-popup-content {
+    font-family: inherit;
+}
+
+.leaflet-popup-content h3{
+    margin-bottom:10px;
+}
+
+.branches-page{
+    padding-top: 90px; /* Adjust if needed */
+    display: flex;
+    justify-content: center;
+}

@@ -1,4 +1,5 @@
 import "./App.css";
+
 import {
   Route,
   Routes,
@@ -11,6 +12,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
 import Export from "./pages/Export";
+import Branches from "./pages/Branches";
 
 function App() {
   const { i18n } = useTranslation();
@@ -26,6 +28,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
         <Route path="/export" element={<Export/>}/>
+        <Route path="/branches" element={<Branches/>}/>
       </Routes>
     </BrowserRouter>
   );
