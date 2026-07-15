@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 import Export from "./pages/Export";
 import Branches from "./pages/Branches";
+import Contact from "./pages/Contact";
 
 function App() {
   const { i18n } = useTranslation();
@@ -29,6 +30,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/export" element={<Export/>}/>
         <Route path="/branches" element={<Branches/>}/>
+        <Route path="/contact" element={<Contact/>}/>
       </Routes>
     </BrowserRouter>
   );

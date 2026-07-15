@@ -123,5 +123,8 @@
 
 "feature1": "International Quality Standards",
 "feature2": "Reliable & Fast Shipping",
-"feature3": "Serving Arab & African Markets"
+"feature3": "Serving Arab & African Markets",
+"contactplaceholder":"Write your message...",
+"sendbtn":"Send via WhatsApp"
+
 }
