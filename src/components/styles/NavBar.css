@@ -15,7 +15,7 @@
     top: 0;
     position: fixed;
     width: 100%;
-    z-index: 5;
+    z-index: 1000;
 }
 .navbar{
     display: flex;
@@ -45,8 +45,52 @@
   margin-left: 10px;
 }
 
-@media (max-width:875px) {
+.menu-btn{
+    display: none;
+}
+
+@media (max-width:875px){
+
     .navbar{
+        position: fixed;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
         display: none;
+        flex-direction: column;
+        max-height: none;
+        padding: 20px;
+        border-radius: 20px;
+        height: 70vh;
+    }
+
+    .navbar.active{
+        display: flex;
+    }
+
+    .links{
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .contactbtn{
+        margin-top: 20px;
+    }
+    .menu-btn {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 15px;
+        background-color: transparent;
+        border: none;
+        width: 20%;
+        font-size: 100%;
+    }
+    .menu-btn img{
+        width: 80%;
+        color: var(--accent);
+        max-width: 70px;
     }
 }

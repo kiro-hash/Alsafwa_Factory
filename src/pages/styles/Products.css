@@ -11,7 +11,7 @@
 /* ---------- LEFT MENU ---------- */
 
 .menu {
-    width: 260px;
+    width:min(80vw, 280px);
     padding: 22px 18px;
     background: var(--accent);
     border-radius: 28px;
@@ -114,38 +114,101 @@
     line-height: 1.8;
     color: var(--text);
 }
+/* Hide button on desktop */
+.products-menu-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:fixed;
+    right:20px;
+    top:15px;
+    z-index:1001;
 
-/* ---------- MOBILE ---------- */
+    padding:12px 18px;
 
-@media (max-width: 992px) {
-    .pcontainer {
-        flex-direction: column;
-        gap: 40px;
-        padding: 20px;
+    border:none;
+    border-radius:30px;
+
+    background:var(--accent);
+    color:var(--bg);
+    cursor:pointer;
+
+    transition: transform .35s ease;
+}
+
+.products-menu-btn.open{
+    transform: translateX(-55vw);
+}
+
+.menu-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.35);
+    z-index:999;
+}
+
+@media (max-width:800px){
+
+    .pcontainer{
+        display:block;
+        padding:100px 20px 40px;
     }
 
-    .menu {
-        width: 100%;
-        max-width: 350px;
+    .products-menu-btn{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        position:fixed;
+        right:20px;
+        top:15px;
+        z-index:1001;
+        padding:12px 18px;
+        border:none;
+        border-radius:30px;
+        background:var(--accent);
+        color:var(--bg);
+        cursor:pointer;
     }
 
-    .product-top {
-        flex-direction: column;
-        text-align: center;
-        gap: 25px;
+    .menu{
+        position:fixed;
+        left:-320px;
+        top:0;
+        width:280px;
+        height:100vh;
+        border-radius:0;
+        padding:100px 20px 30px;
+        z-index:1000;
+        transition:left .35s ease;
+        overflow-y:auto;
+        box-shadow:5px 0 20px rgba(0,0,0,.2);
     }
 
-    .product-info {
-        align-items: center;
+    .menu.open{
+        left:0;
     }
 
-    .product img {
-        width: 220px;
-        height: 220px;
+    .product{
+        width:100%;
     }
 
-    .product p {
-        text-align: center;
-        margin-top: 20px;
+    .product-top{
+        flex-direction:column;
+        text-align:center;
+        gap:25px;
     }
+
+    .product-info{
+        align-items:center;
+    }
+
+    .product img{
+        width:220px;
+        height:220px;
+    }
+
+    .product p{
+        text-align:center;
+    }
+
 }

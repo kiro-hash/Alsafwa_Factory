@@ -134,6 +134,8 @@ html[dir="rtl"] .hero img {
 
 }
 
+
+
 .glasseffect {
   display: flex;
   flex-direction: column;
@@ -445,59 +447,236 @@ html[dir="rtl"] .hero img {
   display: block;
   filter: blur(3px);
 }
-
 /* =========================================================
-   Responsive
+   Extra Responsive Fixes (Append at the Bottom)
    ========================================================= */
-@media (max-width: 900px) {
-  .hero img {
-    height: 60vh;
-  }
-  .herotext {
-    inset-inline-start: 6%;
-    max-width: 85%;
-  }
-  .herotext h1 {
-    font-size: clamp(1.4rem, 6vw, 2.8rem);
-    white-space: normal;
-  }
-  .herotext p {
-    font-size: 1rem;
-    max-width: 100%;
-  }
-  .herobtns {
-    width: 100%;
-    flex-wrap: nowrap;
-  }
-  .achv {
-    flex-direction: column;
-  }
-  .glasseffect {
-    width: 100%;
-  }
-  .products-showcase {
-    height: 55vh;
-  }
-  .view-details {
-    padding: 6px 10px;
-    font-size: 0.65rem;
-  }
-  .see-more {
-    flex-basis: 36px;
-    font-size: 0.7rem;
-  }
-  .whyus-grid {
-    grid-template-columns: 1fr;
-  }
-  .countries-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 6%;
-  }
-  .countries-text h2 {
-    text-align: center;
-  }
-  .countries-stats {
-    align-items: center;
-  }
+
+/* ---------- Tablets ---------- */
+@media (max-width: 1024px){
+
+    .hero{
+        margin-top: 11vh;
+    }
+
+    .hero img{
+        width:95%;
+        height:70vh;
+    }
+
+    .herotext{
+        max-width:70%;
+    }
+
+    .partners-row{
+        justify-content:center;
+    }
+
+    .partner-logo{
+        height:55px;
+    }
+
+    .products-showcase{
+        min-height:380px;
+    }
+
+    .countries-photo{
+        height:260px;
+    }
+
+}
+
+
+/* ---------- Large Phones ---------- */
+@media (max-width:768px){
+
+    .hero{
+        margin-top:90px;
+    }
+
+    .hero img{
+        width:100%;
+        height:65vh;
+        border-radius:25px;
+    }
+
+    .herotext{
+        left:25px;
+        right:25px;
+        max-width:unset;
+    }
+
+    .herotext h1{
+        font-size:2.3rem;
+        white-space:normal;
+    }
+
+    .herotext p{
+        font-size:15px;
+        max-width:100%;
+    }
+
+    .herobtns{
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .btn,
+    .darkbtn,
+    .lightbtn{
+        width: 30px;
+        font-size:.9rem;
+    }
+
+
+
+    .glasseffect{
+        width:100%;
+    }
+
+    .partners-row{
+        justify-content:center;
+        gap:25px;
+    }
+
+    .partner-logo{
+        height:48px;
+    }
+
+    .products-showcase{
+        height:auto;
+        min-height:420px;
+        flex-direction:column;
+    }
+
+    .products-tags-grid{
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:repeat(3,90px);
+    }
+
+    .see-more{
+        writing-mode:horizontal-tb;
+        width:100%;
+        height:55px;
+    }
+
+    .whyus-top{
+        flex-direction:column;
+        gap:25px;
+    }
+
+    .whyus-photo{
+        width:100%;
+        height:250px;
+    }
+
+    .countries-card{
+        padding:30px;
+    }
+
+    .countries-photo{
+        width:100%;
+        height:260px;
+    }
+
+    .countries-text{
+        position:absolute;
+        inset:20px;
+    }
+
+}
+
+
+/* ---------- Small Phones ---------- */
+@media (max-width:800px){
+
+    .home section h2{
+        font-size:1.7rem;
+    }
+
+    .hero{
+        margin-top:80px;
+    }
+
+    .hero img{
+        height:78vh;
+    }
+
+    .herotext{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .herotext h1{
+        font-size:2.5rem;
+        line-height:1.1;
+    }
+
+    .herotext p{
+        font-size:14px;
+        margin-bottom:18px;
+    }
+
+    .btn,
+    .darkbtn,
+    .lightbtn{
+        width:70%;
+        text-align:center;
+    }
+
+    .herobtns{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .achv{
+      display: none;
+    }
+
+    .products-section{
+        padding:40px 5%;
+    }
+
+    .products-showcase{
+        min-height:500px;
+    }
+
+    .products-tags-grid{
+        grid-template-columns:1fr;
+        grid-template-rows:repeat(6,70px);
+    }
+
+    .view-details{
+        width:85%;
+    }
+
+    .whyus-section{
+        padding-inline:5%;
+    }
+
+    .whyus-card{
+        padding:20px;
+    }
+
+    .countries-card{
+        margin-bottom:60px;
+    }
+
+    .countries-photo{
+        height:230px;
+    }
+
+    .countries-text{
+        inset:15px;
+    }
+
+    .countries-text h3{
+        font-size:1.2rem;
+    }
+
+    .countries-stats p{
+        font-size:.8rem;
+    }
+
 }

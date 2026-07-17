@@ -12,26 +12,44 @@ const Products = () => {
 
   const [selectedIndex, setSelectedIndex] = useState(0);
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <LangBtn />
       <NavBar />
 
       <div className="pcontainer">
-        <div className="menu">
+        <button
+          className={`products-menu-btn ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰ {t("products")}
+        </button>
+        <div className={`menu ${menuOpen ? "open" : ""}`}>
           <h1>{t("products")}</h1>
 
           <div className="mproducts">
             {products.map((product, index) => (
               <button
                 key={index}
-                onClick={() => setSelectedIndex(index)}
+                onClick={() => {
+                  setSelectedIndex(index);
+                  setMenuOpen(false);
+                }}
               >
                 <h3>{t(product.productName)}</h3>
               </button>
             ))}
           </div>
         </div>
+
+        {menuOpen && (
+          <div
+            className="menu-overlay"
+            onClick={() => setMenuOpen(false)}
+          />
+        )}
 
         <div className="product">
           <div className="product-top">
