@@ -116,24 +116,7 @@
 }
 /* Hide button on desktop */
 .products-menu-btn{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:fixed;
-    right:20px;
-    top:15px;
-    z-index:1001;
-
-    padding:12px 18px;
-
-    border:none;
-    border-radius:30px;
-
-    background:var(--accent);
-    color:var(--bg);
-    cursor:pointer;
-
-    transition: transform .35s ease;
+    display: none;
 }
 
 .products-menu-btn.open{
@@ -151,8 +134,8 @@
 
     .pcontainer{
         display:block;
-        padding:100px 20px 40px;
     }
+    
 
     .products-menu-btn{
         display:flex;
@@ -168,6 +151,7 @@
         background:var(--accent);
         color:var(--bg);
         cursor:pointer;
+        
     }
 
     .menu{

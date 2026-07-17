@@ -194,15 +194,15 @@ html[dir="rtl"] .hero img {
    over it, and a vertical "SEE MORE" tab on the right edge
    ========================================================= */
 .products-section {
-  padding: 40px 8% 90px;
+  margin-top: 100px;
   text-align: center;
 }
 
 .products-showcase {
   position: relative;
-  max-width: 1100px;
+  width: 90%;
   margin: 30px auto 0;
-  height: 65vh;
+  height: 70vh;
   min-height: 420px;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -230,9 +230,25 @@ html[dir="rtl"] .hero img {
 .products-tag-cell {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+
+  flex-direction: column;
+
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+.products-tag-cell img{
+  width: 150px;
+  height: 150px;
+}
+
+.pimg{
+  height: 25vh ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .view-details {
   display: inline-flex;
@@ -242,8 +258,10 @@ html[dir="rtl"] .hero img {
   border-radius: 999px;
   background: var(--green);
   color: #fff;
+  margin-bottom: 7px;
   text-decoration: none;
   font-weight: 700;
+  bottom: 0;
   font-size: 0.78rem;
   white-space: nowrap;
   box-shadow: 0 6px 18px rgba(13, 34, 51, 0.35);
@@ -358,10 +376,7 @@ html[dir="rtl"] .hero img {
   margin: 0;
 }
 
-/* =========================================================
-   Exporting — compact rounded dark card (matches the original
-   mock), photo beside the text + 3 feature lines
-   ========================================================= */
+
 .countries-card {
   max-width: 1100px;
   margin: 0 auto 90px;
@@ -447,11 +462,7 @@ html[dir="rtl"] .hero img {
   display: block;
   filter: blur(3px);
 }
-/* =========================================================
-   Extra Responsive Fixes (Append at the Bottom)
-   ========================================================= */
 
-/* ---------- Tablets ---------- */
 @media (max-width: 1024px){
 
     .hero{
@@ -486,17 +497,15 @@ html[dir="rtl"] .hero img {
 }
 
 
-/* ---------- Large Phones ---------- */
+
 @media (max-width:768px){
 
-    .hero{
-        margin-top:90px;
-    }
+
 
     .hero img{
         width:100%;
-        height:65vh;
-        border-radius:25px;
+        height:100vh;
+        border-radius:0;
     }
 
     .herotext{
@@ -505,8 +514,10 @@ html[dir="rtl"] .hero img {
         max-width:unset;
     }
 
+
+
     .herotext h1{
-        font-size:2.3rem;
+        font-size:2rem;
         white-space:normal;
     }
 
@@ -586,7 +597,7 @@ html[dir="rtl"] .hero img {
 }
 
 
-/* ---------- Small Phones ---------- */
+
 @media (max-width:800px){
 
     .home section h2{

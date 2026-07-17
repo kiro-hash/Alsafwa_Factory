@@ -11,32 +11,14 @@ import LangBtn from "../components/LangBtn";
 import heroimg from "../assets/triangles.png";
 import cowBanner from "../assets/farm-hero.jpg";
 
-import fathallaLogo from "../assets/partner-fathalla.png";
-import carrefourLogo from "../assets/partner-carrefour.png";
-import spinneysLogo from "../assets/partner-spinneys.png";
-import seoudiLogo from "../assets/partner-seoudi.png";
-
-import productPhoto from "../assets/triangles.png";
-import placeholderImg from "../assets/placeholder.png";
 
 import factoryImg from "../assets/factory.jpg";
 import exportImg from "../assets/export-ship.jpg";
+import products from "../Data/Products";
 
-const PARTNERS = [
-  { name: "Seoudi", logo: seoudiLogo },
-  { name: "Fathalla", logo: fathallaLogo },
-  { name: "Carrefour", logo: carrefourLogo },
-  { name: "Spinneys", logo: spinneysLogo },
-];
 
-const PRODUCT_IMAGES = [
-  productPhoto,
-  placeholderImg,
-  placeholderImg,
-  placeholderImg,
-  placeholderImg,
-  placeholderImg,
-];
+
+
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -91,36 +73,21 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ================= PARTNERS ================= */}
-
-      <section className="partners-row">
-        {PARTNERS.map((partner) => (
-          <img
-            key={partner.name}
-            src={partner.logo}
-            alt={partner.name}
-            className="partner-logo"
-          />
-        ))}
-      </section>
-
-      {/* ================= PRODUCTS ================= */}
 
       <section className="products-section">
         <h2>{t("productstitle")}</h2>
-
         <div className="products-showcase">
           <img
             className="products-bg"
             src={cowBanner}
             alt={t("productstitle")}
           />
-
           <div className="products-tags-grid">
-            {PRODUCT_IMAGES.map((img, index) => (
+            {products.map((product, index) => (
               <div className="products-tag-cell" key={index}>
-                <img src={img} alt="" />
-
+                <div className="pimg">
+                <img src={product.productImg} alt="" />
+                </div>
                 <Link to="/products" className="view-details">
                   {t("viewdetails")}
                 </Link>
@@ -134,7 +101,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ================= WHY US ================= */}
+
 
       <section className="whyus-section">
         <h2>{t("whyustitle")}</h2>
@@ -184,7 +151,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ================= EXPORT ================= */}
+
 
       <section className="countries-card">
         <div className="countries-photo">
