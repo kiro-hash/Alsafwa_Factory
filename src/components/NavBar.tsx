@@ -11,7 +11,7 @@ const NavBar = () => {
   return (
     <div className="container">
       <button className="menu-btn"  onClick={()=>{setisopened(!isopened)}}>
-        <PanelsTopLeft  color="#393939" strokeWidth={2}/>
+        <PanelsTopLeft  color="#238639" strokeWidth={3}/>
       </button>
       <div className={isopened? "navbar active":"navbar"}>
         <img src={logo} alt="logo" />
