@@ -5,8 +5,13 @@ import p4 from "../assets/products/4.png";
 import p5 from "../assets/products/5.png";
 import p6 from "../assets/products/6.png";
 
+export interface Product {
+  productImg: string;
+  productName: string;
+  productDesc: string;
+}
 
-const products = [
+const products :Product[]= [
 
   {
     productImg: p6,

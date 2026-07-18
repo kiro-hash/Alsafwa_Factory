@@ -1,15 +1,22 @@
-const branches = [
+export interface Branch {
+  id: number;
+  title: string;
+  position: [number, number];
+  phones: string[];
+  telephone?: string;
+  fax?: string;
+  email?: string;
+}
+
+const branches: Branch[] = [
   {
     id: 1,
     title: "Factory",
-    position: [31.2115, 29.9440], // Replace with actual coordinates
-    phones: [
-      "01066618757",
-      "01066673597"
-    ],
+    position: [31.2115, 29.9440],
+    phones: ["01066618757", "01066673597"],
     telephone: "002047296400",
     fax: "0020472964003",
-    email: "elseady_milk@yahoo.com"
+    email: "elseady_milk@yahoo.com",
   },
 
   {

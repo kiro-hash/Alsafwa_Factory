@@ -13,7 +13,7 @@ import cowBanner from "../assets/farm-hero.jpg";
 
 import factoryImg from "../assets/factory.jpg";
 import exportImg from "../assets/export-ship.jpg";
-import products from "../Data/Products.js";
+import products from "../Data/Products";
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -85,7 +85,7 @@ const Home = () => {
                 <div className="pimg">
                   <img
                     src={product.productImg}
-                    alt={product.name}
+                    alt={product.productName}
                   />
                 </div>
 
@@ -108,7 +108,7 @@ const Home = () => {
               >
                 <img
                   src={product.productImg}
-                  alt={product.name}
+                  alt={product.productName}
                 />
 
                 <Link
