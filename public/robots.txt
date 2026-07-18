@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alsafwa-factory-o65x.vercel.app/sitemap.xml
