@@ -5,7 +5,7 @@ import LangBtn from "../components/LangBtn";
 import NavBar from "../components/NavBar";
 import "./styles/Products.css";
 
-import products from "../Data/Products";
+import products from "../Data/Products.js";
 
 const Products = () => {
   const { t } = useTranslation();

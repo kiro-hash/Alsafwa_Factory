@@ -13,7 +13,7 @@ import cowBanner from "../assets/farm-hero.jpg";
 
 import factoryImg from "../assets/factory.jpg";
 import exportImg from "../assets/export-ship.jpg";
-import products from "../Data/Products";
+import products from "../Data/Products.js";
 
 const Home = () => {
   const { t, i18n } = useTranslation();

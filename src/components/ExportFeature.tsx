@@ -1,6 +1,12 @@
+import type { ReactNode } from "react";
 import "./styles/ExportFeature.css";
 
-const ExportFeature = ({ icon, title }) => {
+interface ExportFeatureProps {
+    icon: ReactNode;
+    title: string;
+}
+
+const ExportFeature = ({ icon, title }:ExportFeatureProps) => {
   return (
     <div className="export-feature">
       <div className="feature-icon">

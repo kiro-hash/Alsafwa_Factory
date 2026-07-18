@@ -5,7 +5,7 @@ import {
   Popup,
 } from "react-leaflet";
 
-import branches from "../Data/Branches";
+import branches from "../Data/Branches.js";
 
 const BranchMap = () => {
   return (
