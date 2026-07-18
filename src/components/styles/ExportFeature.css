@@ -1,0 +1,29 @@
+.export-feature {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  gap: 12px;
+}
+
+.export-feature img {
+  width: 48px;
+
+  height: 48px;
+
+  object-fit: contain;
+}
+
+.export-feature p {
+  font-size: 16px;
+
+  color: #184a36;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}

@@ -11,14 +11,9 @@ import LangBtn from "../components/LangBtn";
 import heroimg from "../assets/triangles.png";
 import cowBanner from "../assets/farm-hero.jpg";
 
-
 import factoryImg from "../assets/factory.jpg";
 import exportImg from "../assets/export-ship.jpg";
 import products from "../Data/Products";
-
-
-
-
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -73,7 +68,6 @@ const Home = () => {
         </div>
       </section>
 
-
       <section className="products-section">
         <h2>{t("productstitle")}</h2>
         <div className="products-showcase">
@@ -84,11 +78,43 @@ const Home = () => {
           />
           <div className="products-tags-grid">
             {products.map((product, index) => (
-              <div className="products-tag-cell" key={index}>
+              <div
+                className="products-tag-cell"
+                key={index}
+              >
                 <div className="pimg">
-                <img src={product.productImg} alt="" />
+                  <img
+                    src={product.productImg}
+                    alt={product.name}
+                  />
                 </div>
-                <Link to="/products" className="view-details">
+
+                <Link
+                  to="/products"
+                  className="view-details"
+                >
+                  {t("viewdetails")}
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile List */}
+          <div className="products-mobile-list">
+            {products.map((product, index) => (
+              <div
+                className="product-mobile-card"
+                key={index}
+              >
+                <img
+                  src={product.productImg}
+                  alt={product.name}
+                />
+
+                <Link
+                  to="/products"
+                  className="view-details"
+                >
                   {t("viewdetails")}
                 </Link>
               </div>
@@ -100,8 +126,6 @@ const Home = () => {
           </Link>
         </div>
       </section>
-
-
 
       <section className="whyus-section">
         <h2>{t("whyustitle")}</h2>
@@ -150,8 +174,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-
 
       <section className="countries-card">
         <div className="countries-photo">

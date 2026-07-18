@@ -44,7 +44,10 @@
   border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease,
+    background 0.15s ease;
 }
 .home .btn:hover,
 .home .darkbtn:hover,
@@ -131,10 +134,7 @@ html[dir="rtl"] .hero img {
   display: flex;
   gap: 14px;
   margin-top: 26px;
-
 }
-
-
 
 .glasseffect {
   display: flex;
@@ -181,7 +181,9 @@ html[dir="rtl"] .hero img {
   width: auto;
   object-fit: contain;
   opacity: 0.9;
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
 }
 
 .partner-logo:hover {
@@ -237,18 +239,17 @@ html[dir="rtl"] .hero img {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.products-tag-cell img{
+.products-tag-cell img {
   width: 150px;
   height: 150px;
 }
 
-.pimg{
-  height: 25vh ;
+.pimg {
+  height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 
 .view-details {
   display: inline-flex;
@@ -376,7 +377,6 @@ html[dir="rtl"] .hero img {
   margin: 0;
 }
 
-
 .countries-card {
   max-width: 1100px;
   margin: 0 auto 90px;
@@ -398,8 +398,6 @@ html[dir="rtl"] .hero img {
   bottom: 0;
   z-index: 1;
 }
-
-
 
 .countries-text h3 {
   font-size: 1.5rem;
@@ -463,231 +461,281 @@ html[dir="rtl"] .hero img {
   filter: blur(3px);
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
+  .hero {
+    margin-top: 11vh;
+  }
 
-    .hero{
-        margin-top: 11vh;
-    }
+  .hero img {
+    width: 95%;
+    height: 70vh;
+  }
 
-    .hero img{
-        width:95%;
-        height:70vh;
-    }
+  .herotext {
+    max-width: 70%;
+  }
 
-    .herotext{
-        max-width:70%;
-    }
+  .partners-row {
+    justify-content: center;
+  }
 
-    .partners-row{
-        justify-content:center;
-    }
+  .partner-logo {
+    height: 55px;
+  }
 
-    .partner-logo{
-        height:55px;
-    }
+  .products-showcase {
+    min-height: 380px;
+  }
 
-    .products-showcase{
-        min-height:380px;
-    }
-
-    .countries-photo{
-        height:260px;
-    }
-
+  .countries-photo {
+    height: 260px;
+  }
 }
 
+.products-mobile-list {
+  display: none;
+}
+@media (max-width: 768px) {
+  .products-bg {
+    display: none;
+  }
 
+  .products-tags-grid {
+    display: none;
+  }
 
-@media (max-width:768px){
+  .see-more {
+    display: none;
+  }
 
+  .products-showcase {
+    background: #fff;
 
+    height: auto;
 
-    .hero img{
-        width:100%;
-        height:100vh;
-        border-radius:0;
-    }
+    min-height: auto;
 
-    .herotext{
-        left:25px;
-        right:25px;
-        max-width:unset;
-    }
+    display: block;
 
+    padding: 20px;
 
+    border-radius: 30px;
 
-    .herotext h1{
-        font-size:2rem;
-        white-space:normal;
-    }
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
 
-    .herotext p{
-        font-size:15px;
-        max-width:100%;
-    }
+  .products-mobile-list {
+    display: flex;
 
-    .herobtns{
-        flex-wrap:wrap;
-        gap:10px;
-    }
+    flex-direction: column;
 
-    .btn,
-    .darkbtn,
-    .lightbtn{
-        width: 30px;
-        font-size:.9rem;
-    }
+    gap: 24px;
+  }
 
+  .product-mobile-card {
+    background: #f7f8f7;
 
+    border-radius: 20px;
 
-    .glasseffect{
-        width:100%;
-    }
+    padding: 20px;
 
-    .partners-row{
-        justify-content:center;
-        gap:25px;
-    }
+    display: flex;
 
-    .partner-logo{
-        height:48px;
-    }
+    flex-direction: column;
 
-    .products-showcase{
-        height:auto;
-        min-height:420px;
-        flex-direction:column;
-    }
+    align-items: center;
+  }
 
-    .products-tags-grid{
-        grid-template-columns:repeat(2,1fr);
-        grid-template-rows:repeat(3,90px);
-    }
+  .product-mobile-card img {
+    width: 170px;
 
-    .see-more{
-        writing-mode:horizontal-tb;
-        width:100%;
-        height:55px;
-    }
+    height: 170px;
 
-    .whyus-top{
-        flex-direction:column;
-        gap:25px;
-    }
+    object-fit: contain;
 
-    .whyus-photo{
-        width:100%;
-        height:250px;
-    }
+    margin-bottom: 20px;
+  }
 
-    .countries-card{
-        padding:30px;
-    }
-
-    .countries-photo{
-        width:100%;
-        height:260px;
-    }
-
-    .countries-text{
-        position:absolute;
-        inset:20px;
-    }
-
+  .product-mobile-card .view-details {
+    margin: 0;
+  }
 }
 
+@media (max-width: 768px) {
+  .hero img {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
 
+  .herotext {
+    left: 25px;
+    right: 25px;
+    max-width: unset;
+  }
 
-@media (max-width:800px){
+  .herotext h1 {
+    font-size: 2rem;
+    white-space: normal;
+  }
 
-    .home section h2{
-        font-size:1.7rem;
-    }
+  .herotext p {
+    font-size: 15px;
+    max-width: 100%;
+  }
 
-    .hero{
-        margin-top:80px;
-    }
+  .herobtns {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
-    .hero img{
-        height:78vh;
-    }
+  .btn,
+  .darkbtn,
+  .lightbtn {
+    width: 30px;
+    font-size: 0.9rem;
+  }
 
-    .herotext{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+  .glasseffect {
+    width: 100%;
+  }
 
-    .herotext h1{
-        font-size:2.5rem;
-        line-height:1.1;
-    }
+  .partners-row {
+    justify-content: center;
+    gap: 25px;
+  }
 
-    .herotext p{
-        font-size:14px;
-        margin-bottom:18px;
-    }
+  .partner-logo {
+    height: 48px;
+  }
 
-    .btn,
-    .darkbtn,
-    .lightbtn{
-        width:70%;
-        text-align:center;
-    }
+  .products-tags-grid {
+    display: none;
+  }
 
-    .herobtns{
-        flex-direction:column;
-        align-items:stretch;
-    }
+  .products-showcase {
+    min-height: auto;
+    height: auto;
+    justify-content: center;
+  }
 
-    .achv{
-      display: none;
-    }
+  .see-more {
+    display: none;
+  }
 
-    .products-section{
-        padding:40px 5%;
-    }
+  .whyus-top {
+    flex-direction: column;
+    gap: 25px;
+  }
 
-    .products-showcase{
-        min-height:500px;
-    }
+  .whyus-photo {
+    width: 100%;
+    height: 250px;
+  }
 
-    .products-tags-grid{
-        grid-template-columns:1fr;
-        grid-template-rows:repeat(6,70px);
-    }
+  .countries-card {
+    padding: 30px;
+  }
 
-    .view-details{
-        width:85%;
-    }
+  .countries-photo {
+    width: 100%;
+    height: 260px;
+  }
 
-    .whyus-section{
-        padding-inline:5%;
-    }
+  .countries-text {
+    position: absolute;
+    inset: 20px;
+  }
+}
 
-    .whyus-card{
-        padding:20px;
-    }
+@media (max-width: 800px) {
+  .home section h2 {
+    font-size: 1.7rem;
+  }
 
-    .countries-card{
-        margin-bottom:60px;
-    }
+  .hero {
+    margin-top: 80px;
+  }
 
-    .countries-photo{
-        height:230px;
-    }
+  .hero img {
+    height: 78vh;
+  }
 
-    .countries-text{
-        inset:15px;
-    }
+  .herotext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-    .countries-text h3{
-        font-size:1.2rem;
-    }
+  .herotext h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
 
-    .countries-stats p{
-        font-size:.8rem;
-    }
+  .herotext p {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
 
+  .btn,
+  .darkbtn,
+  .lightbtn {
+    width: 70%;
+    text-align: center;
+  }
+
+  .herobtns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .achv {
+    display: none;
+  }
+
+  .products-section {
+    padding: 40px 5%;
+  }
+
+  .products-showcase {
+    min-height: 500px;
+  }
+
+  .products-tags-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 70px);
+  }
+
+  .view-details {
+    width: 85%;
+  }
+
+  .whyus-section {
+    padding-inline: 5%;
+  }
+
+  .whyus-card {
+    padding: 20px;
+  }
+
+  .countries-card {
+    margin-bottom: 60px;
+  }
+
+  .countries-photo {
+    height: 230px;
+  }
+
+  .countries-text {
+    inset: 15px;
+  }
+
+  .countries-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .countries-stats p {
+    font-size: 0.8rem;
+  }
 }

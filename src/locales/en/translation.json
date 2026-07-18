@@ -125,6 +125,19 @@
 "feature2": "Reliable & Fast Shipping",
 "feature3": "Serving Arab & African Markets",
 "contactplaceholder":"Write your message...",
-"sendbtn":"Send via WhatsApp"
+"sendbtn":"Send via WhatsApp",
+
+
+"exportHeroTitle": "Exporting\nQuality Worldwide",
+  "exportHeroDescription": "Bringing the authentic taste of Al Safwa products to customers across the Middle East and Africa.",
+
+  "exportFeature1": "Premium Quality",
+  "exportFeature2": "International Standards",
+  "exportFeature3": "Trusted in Many Markets",
+  "exportFeature4": "Long-Term Partnerships",
+
+  "exportButton": "Bringing Goodness Across Borders",
+
+  "exportProductsAlt": "Al Safwa Products"
 
 }

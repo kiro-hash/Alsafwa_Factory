@@ -14,6 +14,7 @@ import Products from "./pages/Products";
 import Export from "./pages/Export";
 import Branches from "./pages/Branches";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const { i18n } = useTranslation();
@@ -24,6 +25,7 @@ function App() {
   }, [i18n.language]);
   return (
     <BrowserRouter>
+    <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
