@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import productsImg from "../assets/productsImgAboutPage.png";
 import "./styles/About.css";
 import LangBtn from "../components/LangBtn";
+import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
 const About = () => {
@@ -11,6 +12,17 @@ const About = () => {
     <>
       <LangBtn />
       <NavBar />
+      <Helmet>
+        <title>About | Alsafwa Factory</title>
+        <meta
+          name="description"
+          content="Learn more about Alsafwa Factory."
+        />
+        <link
+          rel="canonical"
+          href="https://alsafwafactory.vercel.app/about"
+        />
+      </Helmet>
       <div className="about-container">
         <section className="about-hero">
           <div className="about-text">

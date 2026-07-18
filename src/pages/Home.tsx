@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 import "./styles/Home.css";
 
@@ -25,6 +26,17 @@ const Home = () => {
       <LangBtn />
 
       <NavBar />
+      <Helmet>
+        <title>About | Alsafwa Factory</title>
+        <meta
+          name="description"
+          content="Learn more about Alsafwa Factory."
+        />
+        <link
+          rel="canonical"
+          href="https://alsafwafactory.vercel.app/about"
+        />
+      </Helmet>
 
       {/* ================= HERO ================= */}
 

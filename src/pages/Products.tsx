@@ -5,6 +5,8 @@ import LangBtn from "../components/LangBtn";
 import NavBar from "../components/NavBar";
 import "./styles/Products.css";
 
+import { Helmet } from "react-helmet-async";
+
 import products from "../Data/Products";
 
 const Products = () => {
@@ -18,6 +20,17 @@ const Products = () => {
     <>
       <LangBtn />
       <NavBar />
+      <Helmet>
+        <title>About | Alsafwa Factory</title>
+        <meta
+          name="description"
+          content="Learn more about Alsafwa Factory."
+        />
+        <link
+          rel="canonical"
+          href="https://alsafwafactory.vercel.app/about"
+        />
+      </Helmet>
 
       <div className="pcontainer">
         <button

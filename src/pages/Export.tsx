@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import ExportFeature from "../components/ExportFeature";
 import LangBtn from "../components/LangBtn";
+import { Helmet } from "react-helmet-async";
 
 import "./styles/Export.css";
 
@@ -25,6 +26,17 @@ const Export = () => {
     <>
       <NavBar />
       <LangBtn />
+      <Helmet>
+        <title>About | Alsafwa Factory</title>
+        <meta
+          name="description"
+          content="Learn more about Alsafwa Factory."
+        />
+        <link
+          rel="canonical"
+          href="https://alsafwafactory.vercel.app/about"
+        />
+      </Helmet>
 
       <section className="export-page">
         <div className="export-overlay"></div>
@@ -46,7 +58,9 @@ const Export = () => {
               />
 
               <ExportFeature
-                icon={<ShieldCheck size={42} strokeWidth={2} />}
+                icon={
+                  <ShieldCheck size={42} strokeWidth={2} />
+                }
                 title={t("exportFeature2")}
               />
 
@@ -56,7 +70,9 @@ const Export = () => {
               />
 
               <ExportFeature
-                icon={<Handshake size={42} strokeWidth={2} />}
+                icon={
+                  <Handshake size={42} strokeWidth={2} />
+                }
                 title={t("exportFeature4")}
               />
             </div>
