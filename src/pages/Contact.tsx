@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 const Contact = () => {
   const [message, setMessage] = useState("");
 
-  const phoneNumber = "201208583386";
+  const phoneNumber = "201023236000";
 
   const {t} = useTranslation();
 
