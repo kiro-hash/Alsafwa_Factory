@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import logo from '../assets/logo.png'
-import './styles/Footer.css'
+import logo from "../assets/logo.png";
+import "./styles/Footer.css";
 const Footer = () => {
   const { t } = useTranslation();
 
@@ -25,22 +25,19 @@ const Footer = () => {
 
         <div className="footer-col">
           <h4>{t("footerFollow")}</h4>
-          <a href="#">{t("facebook")}</a>
-          <a href="#">{t("instagram")}</a>
-          <a href="#">{t("twitter")}</a>
-          <a href="#">{t("threads")}</a>
+          <a target="_blank" href="https://www.facebook.com/share/1jgNPwnEZE/?mibextid=wwXIfr">{t("facebook")}</a>
         </div>
 
         <div className="footer-col">
           <h4>{t("footerContact")}</h4>
-          <a href="#">{t("whatsapp")}</a>
-          <a href="#">{t("sendNow")}</a>
-        </div>
-
-        <div className="footer-col">
-          <h4>{t("footerJoin")}</h4>
-          <a href="#">{t("partners")}</a>
-          <a href="#">{t("joinNow")}</a>
+          <a
+            href="https://wa.me/201023236000"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("whatsapp")}
+          </a>
+          <a href="/contact">{t("sendNow")}</a>
         </div>
       </div>
 
@@ -53,4 +50,4 @@ const Footer = () => {
   );
 };
 
-export default Footer
+export default Footer;

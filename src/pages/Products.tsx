@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import LangBtn from "../components/LangBtn";
 import NavBar from "../components/NavBar";
 import "./styles/Products.css";
+import { useSearchParams } from "react-router-dom";
 
 import { Helmet } from "react-helmet-async";
 
@@ -12,7 +13,17 @@ import products from "../Data/Products";
 const Products = () => {
   const { t } = useTranslation();
 
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [searchParams] = useSearchParams();
+
+  const productId = Number(searchParams.get("product"));
+
+  const initialIndex = products.findIndex(
+    (p) => p.id === productId,
+  );
+
+  const [selectedIndex, setSelectedIndex] = useState(
+    initialIndex >= 0 ? initialIndex : 0,
+  );
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -21,14 +32,16 @@ const Products = () => {
       <LangBtn />
       <NavBar />
       <Helmet>
-        <title>About | Alsafwa Factory</title>
+        <title>Products | Alsafwa Factory</title>
+
         <meta
           name="description"
-          content="Learn more about Alsafwa Factory."
+          content="Explore Alsafwa Factory's premium cheese products."
         />
+
         <link
           rel="canonical"
-          href="https://alsafwafactory.vercel.app/about"
+          href="https://alsafwafactory.vercel.app/products"
         />
       </Helmet>
 

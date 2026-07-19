@@ -16,10 +16,12 @@ import factoryImg from "../assets/factory.jpg";
 import exportImg from "../assets/export-ship.jpg";
 import products from "../Data/Products";
 
+
 const Home = () => {
   const { t, i18n } = useTranslation();
 
   const isRTL = i18n.language === "ar";
+
 
   return (
     <div className={`home ${isRTL ? "rtl" : "ltr"}`}>
@@ -27,22 +29,58 @@ const Home = () => {
 
       <NavBar />
       <Helmet>
-        <title>Alsafwa Factory</title>
+        <html lang={isRTL ? "ar" : "en"} />
+
+        <title>
+          Alsafwa Factory | Premium Cheese Manufacturer
+        </title>
 
         <meta
           name="description"
-          content="Premium farm-fresh cheese manufacturer in Egypt."
+          content="Alsafwa Factory is a premium Egyptian cheese manufacturer producing high-quality dairy products for local and international markets."
         />
 
-        <meta property="og:site_name" content="Alsafwa Factory" />
+        <meta
+          name="keywords"
+          content="cheese, dairy, egypt, factory, mozzarella, cheddar, feta, export"
+        />
+
+        <meta name="author" content="Alsafwa Factory" />
+
+        <link
+          rel="canonical"
+          href="https://alsafwafactory.vercel.app/"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Alsafwa Factory"
+        />
+        <meta
+          property="og:description"
+          content="Premium Egyptian cheese manufacturer."
+        />
+        <meta
+          property="og:image"
+          content="https://alsafwafactory.vercel.app/logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://alsafwafactory.vercel.app/"
+        />
+        <meta
+          property="og:site_name"
+          content="Alsafwa Factory"
+        />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "WebSite",
-            url: "https://alsafwafactory.vercel.app/",
+            "@type": "Organization",
             name: "Alsafwa Factory",
-            alternateName: "AL SAFWA FACTORY"
+            url: "https://alsafwafactory.vercel.app",
+            logo: "https://alsafwafactory.vercel.app/logo.png",
           })}
         </script>
       </Helmet>
@@ -111,7 +149,7 @@ const Home = () => {
                 </div>
 
                 <Link
-                  to="/products"
+                  to={`/products?product=${product.id}`}
                   className="view-details"
                 >
                   {t("viewdetails")}

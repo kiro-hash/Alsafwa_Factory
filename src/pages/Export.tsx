@@ -27,7 +27,7 @@ const Export = () => {
       <NavBar />
       <LangBtn />
       <Helmet>
-        <title>About | Alsafwa Factory</title>
+        <title>Export | Alsafwa Factory</title>
         <meta
           name="description"
           content="Learn more about Alsafwa Factory."

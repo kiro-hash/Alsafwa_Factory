@@ -31,7 +31,7 @@ const Contact = () => {
       <NavBar />
       <LangBtn />
       <Helmet>
-        <title>About | Alsafwa Factory</title>
+        <title>Contact | Alsafwa Factory</title>
         <meta
           name="description"
           content="Learn more about Alsafwa Factory."

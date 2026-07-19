@@ -9,7 +9,7 @@ const Branches = () => {
     <>
       <NavBar />
       <Helmet>
-        <title>About | Alsafwa Factory</title>
+        <title>Branches | Alsafwa Factory</title>
         <meta
           name="description"
           content="Learn more about Alsafwa Factory."
