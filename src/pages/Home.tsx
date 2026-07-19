@@ -171,7 +171,7 @@ const Home = () => {
                 />
 
                 <Link
-                  to="/products"
+                  to={`/products?product=${product.id}`}
                   className="view-details"
                 >
                   {t("viewdetails")}
