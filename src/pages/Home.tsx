@@ -27,15 +27,24 @@ const Home = () => {
 
       <NavBar />
       <Helmet>
-        <title>About | Alsafwa Factory</title>
+        <title>Alsafwa Factory</title>
+
         <meta
           name="description"
-          content="Learn more about Alsafwa Factory."
+          content="Premium farm-fresh cheese manufacturer in Egypt."
         />
-        <link
-          rel="canonical"
-          href="https://alsafwafactory.vercel.app/about"
-        />
+
+        <meta property="og:site_name" content="Alsafwa Factory" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            url: "https://alsafwafactory.vercel.app/",
+            name: "Alsafwa Factory",
+            alternateName: "AL SAFWA FACTORY"
+          })}
+        </script>
       </Helmet>
 
       {/* ================= HERO ================= */}
