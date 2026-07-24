@@ -1,5 +1,4 @@
 {
-  "_1comment": "Nav",
   "home": "Home",
   "about": "About Us",
   "branches": "Branches",
@@ -7,19 +6,16 @@
   "export": "Export",
   "contact": "Contact Us",
 
-  "_2comment": "hero",
-  "heroheader": "AL SAFWA FACTORY",
-  "herodesc": "Crafting premium, farm-fresh cheese with traditional expertise and uncompromising quality—bringing authentic flavor to every table.",
+  "heroheader": "Al Safwa Factory",
+  "herodesc": "With decades of experience, we produce premium-quality processed cheese made with care and the highest quality standards, bringing an authentic taste to every table.",
 
-  "_3comment": "herobtns",
   "productsbtn": "Explore Our Products",
 
-  "_4comment": "achv",
-  "t01": "50+",
+  "t01": "+50",
   "t02": "Years",
-  "t03": "Experience",
+  "t03": "of Experience",
 
-  "t11": "150+",
+  "t11": "+150",
   "t22": "Retail",
   "t33": "Partners",
 
@@ -27,117 +23,102 @@
   "t222": "Fresh",
   "t333": "Cheese",
 
-  
-  "_6comment": "About Page",
-
   "aboutEyebrow": "Since 1984",
   "aboutTitle": "About Al Safwa",
 
-  "aboutP1": "Al Safwa Processed Cheese Factory is a fully integrated dairy manufacturing company operating across various sectors of the dairy industry. Since its establishment in 1984, the factory has become a leading name in dairy production, utilizing the latest Italian production technologies specialized in manufacturing a wide range of processed cheese products. Over the years, the factory has earned a strong reputation for consistently delivering products of exceptional quality.",
+  "aboutP1": "Al Safwa Processed Cheese Factory is a fully integrated dairy manufacturer specializing in a wide range of cheese products. Since its establishment in 1984, the factory has become a leading name in the dairy industry by utilizing the latest Italian production technology to manufacture premium processed cheese. Over the years, we have earned a strong reputation for consistently delivering high-quality products.",
 
-  "aboutP2": "Thanks to our key competitive strengths—high product quality, customer satisfaction, and competitive pricing—we have successfully built strong and lasting trust with our customers throughout our many years of experience.",
+  "aboutP2": "Our competitive strengths lie in product quality, customer satisfaction, and competitive pricing. These values have enabled us to build lasting relationships of trust with our customers throughout decades of experience.",
 
-  "aboutP3": "Today, our products are widely distributed across the Egyptian market, where they enjoy a strong market presence and significant market share while maintaining competitive prices. In addition, we export to various Arab and African markets as part of our carefully planned and implemented sales strategy. This strategy allows us to maximize our high production capacity and take full advantage of our factory's advanced manufacturing capabilities.",
+  "aboutP3": "Today, our products are distributed across the Egyptian market with a strong presence and a distinguished market share while maintaining competitive prices. We also export to several Arab and African markets through a carefully planned sales strategy, maximizing our production capacity and advanced manufacturing capabilities.",
 
-  "certTitle": "Since product quality and food safety are among our highest priorities, our factory has been awarded the following internationally recognized quality and food safety certifications:",
+  "certTitle": "Because product quality and food safety are our top priorities, our factory has obtained the following internationally recognized certifications:",
 
   "iso9001": "Quality Management System",
-  "iso18001": "Occupational Health and Safety Management System",
-  "iso22000": "(HACCP) – Food Safety Management System",
+  "iso18001": "Occupational Health & Safety Management System",
+  "iso22000": "Food Safety Management System (HACCP)",
 
-  "aboutSlogan": "Taste the Highest Quality... Honesty in Every Deal.",
+  "aboutSlogan": "Experience the Highest Quality... and Integrity in Every Deal.",
 
-
-  "_7comment": "products",
-  "Processed Cheddar": "Processed Cheddar",
-  "Processed Cheddar desc": "A rich, creamy processed cheddar cheese with a smooth texture and delicious taste. Perfect for sandwiches, burgers, snacks, and a variety of everyday meals. Produced under strict quality and food safety standards.",
+  "Processed Cheddar": "Processed Cheddar Cheese",
+  "Processed Cheddar desc": "Rich and smooth processed Cheddar cheese with a delicious flavor, perfect for sandwiches, burgers, snacks, and everyday meals. Produced according to the highest quality and food safety standards.",
 
   "Flamenco Cheese": "Flamenco Cheese",
-  "Flamenco Cheese desc": "A flavorful Flamenco cheese with a creamy texture and distinctive taste. Ideal for sandwiches, pastries, and family meals. Produced under strict quality and food safety standards.",
+  "Flamenco Cheese desc": "Smooth and flavorful Flamenco cheese, ideal for sandwiches, pastries, and family meals. Produced according to the highest quality and food safety standards.",
 
-  "Natural Triangle": "Natural Triangle",
-  "Natural Triangle desc": "Soft and creamy natural triangle cheese made from carefully selected ingredients. Perfect for breakfast, lunchboxes, snacks, and spreading on fresh bread. Produced under strict quality and food safety standards.",
+  "Natural Triangle": "Natural Triangle Cheese",
+  "Natural Triangle desc": "Creamy natural triangle cheese made from carefully selected ingredients, perfect for breakfast, lunch boxes, and light snacks with fresh bread. Produced according to the highest quality and food safety standards.",
 
-  "Natural Block": "Natural Block",
-  "Natural Block desc": "A smooth and creamy natural cheese block with a fresh, rich flavor. Ideal for slicing, spreading, cooking, or enjoying as a healthy snack. Produced under strict quality and food safety standards.",
+  "Natural Block": "Natural Cheese Block",
+  "Natural Block desc": "Creamy natural cheese block with a rich, fresh flavor, ideal for spreading, cooking, or enjoying as a snack. Produced according to the highest quality and food safety standards.",
 
-  "Flamenco Triangle": "Flamenco Triangle",
-  "Flamenco Triangle desc": "Creamy Flamenco triangle cheese offering a delicious balance of flavor and texture. Perfect for breakfast, sandwiches, and light meals. Produced under strict quality and food safety standards.",
+  "Flamenco Triangle": "Flamenco Triangle Cheese",
+  "Flamenco Triangle desc": "Creamy Flamenco triangle cheese with a rich taste and smooth texture, perfect for breakfast, sandwiches, and snacks. Produced according to the highest quality and food safety standards.",
 
-  "Creamy Block": "Creamy Block",
-  "Creamy Block desc": "An extra creamy cheese block with a rich, smooth texture and delicious taste. Perfect for sandwiches, recipes, and everyday family meals. Produced under strict quality and food safety standards.",
+  "Creamy Block": "Creamy Cheese Block",
+  "Creamy Block desc": "Rich and creamy cheese block with a smooth texture and delicious taste, perfect for sandwiches, recipes, and everyday family meals. Produced according to the highest quality and food safety standards.",
 
-
-
-  "_5comment": "Footer",
   "footerBrand": "Al Safwa",
-  "footerDesc": "Taste the Highest Quality... Honesty in Every Deal.",
+  "footerDesc": "Experience the Highest Quality... and Integrity in Every Deal.",
 
   "footerNav": "Navigation",
 
   "footerFollow": "Follow Us",
   "facebook": "Facebook",
   "instagram": "Instagram",
-  "twitter": "Twitter X",
+  "twitter": "X",
   "threads": "Threads",
 
   "footerContact": "Contact Us",
-  "whatsapp": "Contact Via WhatsApp",
+  "whatsapp": "Contact via WhatsApp",
   "sendNow": "Send Now",
 
   "footerJoin": "Join Us",
-  "partners": "Be from our partners",
+  "partners": "Become a Partner",
   "joinNow": "Join Now",
 
-  "copyright": "Al Safwa Processed Cheese Factory. All rights reserved.",
+  "copyright": "Al Safwa Processed Cheese Factory. All Rights Reserved.",
 
+  "productstitle": "Our Products",
+  "productssubtitle": "Premium-quality cheese produced according to the highest quality standards.",
+  "viewdetails": "View Details",
+  "seemore": "See More",
 
-  "_8comment": "Home - Products",
+  "whyustitle": "Why Al Safwa?",
 
-"productstitle": "Our Products",
-"productssubtitle": "Premium cheese made with the highest quality standards.",
-"viewdetails": "View Details",
-"seemore": "See More",
+  "whyusdesc": "At Al Safwa Factory, quality is more than a promise—it's the foundation of everything we do. By selecting the finest ingredients and applying the latest manufacturing technologies, we produce processed cheese with exceptional taste and consistent quality that our customers trust.",
 
-"_9comment": "Home - Why Us",
+  "quality1title": "Premium Quality",
+  "quality1desc": "We use carefully selected ingredients and follow the highest quality standards to ensure outstanding taste.",
 
-"whyustitle": "Why Choose Al Safwa?",
-"whyusdesc": "At Al Safwa Factory, quality is more than a promise—it's the foundation of everything we do. From carefully selecting premium ingredients to applying advanced manufacturing techniques, we are committed to producing processed cheese that delivers exceptional taste, consistent quality, and complete customer satisfaction.",
+  "quality2title": "Advanced Manufacturing",
+  "quality2desc": "Our production relies on the latest Italian manufacturing lines to ensure consistent quality and high efficiency.",
 
-"quality1title": "Premium Quality",
-"quality1desc": "Produced from carefully selected ingredients using strict quality standards to ensure the finest taste in every bite.",
+  "quality3title": "Food Safety",
+  "quality3desc": "All our products are manufactured in accordance with internationally recognized quality and food safety systems.",
 
-"quality2title": "Advanced Manufacturing",
-"quality2desc": "Our modern production lines use the latest Italian technology to deliver consistent quality and high production efficiency.",
+  "quality4title": "Customer Satisfaction",
+  "quality4desc": "For more than 40 years, we have earned our customers' trust through consistent quality and commitment.",
 
-"quality3title": "Food Safety",
-"quality3desc": "Every product is manufactured under internationally recognized food safety and quality management systems.",
+  "exporting": "Export",
+  "exportingdesc": "Proudly exporting to multiple countries.",
 
-"quality4title": "Customer Satisfaction",
-"quality4desc": "For over 40 years, we have earned the trust of customers by delivering products they can rely on every day.",
+  "feature1": "Meets the Highest Quality Standards",
+  "feature2": "Fast & Reliable Shipping",
+  "feature3": "Serving Arab & African Markets",
 
-"_10comment": "Home - Export",
+  "contactplaceholder": "Write your message...",
+  "sendbtn": "Send via WhatsApp",
 
-"exporting": "Exporting",
-"exportingdesc": "Proudly Exporting to Multiple Countries",
-
-"feature1": "International Quality Standards",
-"feature2": "Reliable & Fast Shipping",
-"feature3": "Serving Arab & African Markets",
-"contactplaceholder":"Write your message...",
-"sendbtn":"Send via WhatsApp",
-
-
-"exportHeroTitle": "Exporting\nQuality Worldwide",
+  "exportHeroTitle": "Exporting Quality\nAround the World",
   "exportHeroDescription": "Bringing the authentic taste of Al Safwa products to customers across the Middle East and Africa.",
 
   "exportFeature1": "Premium Quality",
   "exportFeature2": "International Standards",
-  "exportFeature3": "Trusted in Many Markets",
+  "exportFeature3": "Trusted Across Multiple Markets",
   "exportFeature4": "Long-Term Partnerships",
 
-  "exportButton": "Bringing Goodness Across Borders",
+  "exportButton": "Delivering Quality Beyond Borders",
 
   "exportProductsAlt": "Al Safwa Products"
-
 }
