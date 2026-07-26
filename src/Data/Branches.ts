@@ -12,7 +12,7 @@ const branches: Branch[] = [
   {
     id: 1,
     title: "Factory",
-    position: [30.8857, 29.5625],
+    position: [31.2037, 30.5491],
     phones: ["01066673597", "01023236000"],
     email: "elseady_milk@yahoo.com",
   },
