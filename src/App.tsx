@@ -15,7 +15,6 @@ import Export from "./pages/Export";
 import Branches from "./pages/Branches";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
-import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   const { i18n } = useTranslation();
@@ -25,19 +24,26 @@ function App() {
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/export" element={<Export />} />
-          <Route path="/branches" element={<Branches />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
-    </HelmetProvider>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/:lang" element={<Home />} />
+        <Route path="/:lang/about" element={<About />} />
+        <Route
+          path="/:lang/products"
+          element={<Products />}
+        />
+        <Route path="/:lang/export" element={<Export />} />
+        <Route
+          path="/:lang/branches"
+          element={<Branches />}
+        />
+        <Route
+          path="/:lang/contact"
+          element={<Contact />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

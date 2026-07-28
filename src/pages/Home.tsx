@@ -16,12 +16,10 @@ import factoryImg from "../assets/factory.jpg";
 import exportImg from "../assets/export-ship.jpg";
 import products from "../Data/Products";
 
-
 const Home = () => {
   const { t, i18n } = useTranslation();
 
   const isRTL = i18n.language === "ar";
-
 
   return (
     <div className={`home ${isRTL ? "rtl" : "ltr"}`}>
@@ -32,7 +30,9 @@ const Home = () => {
         <html lang={isRTL ? "ar" : "en"} />
 
         <title>
-          Alsafwa Factory | Premium Cheese Manufacturer
+          {i18n.language === "ar"
+            ? "مصنع الصفوة | الجبن المطبوخ"
+            : "Al Safwa Factory | Processed Cheese Manufacturer"}
         </title>
 
         <meta
