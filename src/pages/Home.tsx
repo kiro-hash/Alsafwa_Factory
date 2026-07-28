@@ -32,7 +32,7 @@ const Home = () => {
         <title>
           {i18n.language === "ar"
             ? "مصنع الصفوة | الجبن المطبوخ"
-            : "Al Safwa Factory | Processed Cheese Manufacturer"}
+            : "مصنع الصفوة | Al Safwa Factory | Processed Cheese Manufacturer in Egypt"}
         </title>
 
         <meta
@@ -113,7 +113,8 @@ const Home = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: "Alsafwa Factory",
+            name: "مصنع الصفوة | Al Safwa Factory",
+            alternateName: "Alsafwa Factory",
             url: "https://alsafwafactory.com",
             logo: "https://alsafwafactory.com/logo.png",
           })}
