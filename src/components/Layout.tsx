@@ -2,8 +2,6 @@ import { Outlet, useParams, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import NavBar from "./NavBar";
-import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 
 const Layout = () => {
@@ -28,11 +26,9 @@ const Layout = () => {
   return (
     <>
       <ScrollToTop />
-      <NavBar />
       <main>
         <Outlet />
       </main>
-      <Footer />
     </>
   );
 };
