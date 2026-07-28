@@ -96,11 +96,17 @@ const Home = () => {
           <p>{t("herodesc")}</p>
 
           <div className="herobtns">
-            <Link className="darkbtn" to="/products">
+            <Link
+              className="darkbtn"
+              to={`/${i18n.language}/products`}
+            >
               {t("productsbtn")}
             </Link>
 
-            <Link className="lightbtn" to="/contact">
+            <Link
+              className="lightbtn"
+              to={`/${i18n.language}/contact`}
+            >
               {t("contact")}
             </Link>
           </div>
@@ -149,7 +155,7 @@ const Home = () => {
                 </div>
 
                 <Link
-                  to={`/products?product=${product.id}`}
+                  to={`/${i18n.language}/products?product=${product.id}`}
                   className="view-details"
                 >
                   {t("viewdetails")}
@@ -171,7 +177,7 @@ const Home = () => {
                 />
 
                 <Link
-                  to={`/products?product=${product.id}`}
+                  to={`/${i18n.language}/products?product=${product.id}`}
                   className="view-details"
                 >
                   {t("viewdetails")}

@@ -2,8 +2,11 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "./styles/Footer.css";
+
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const langPrefix = `/${i18n.language}`;
 
   return (
     <footer className="footer">
@@ -16,20 +19,29 @@ const Footer = () => {
 
         <div className="footer-col">
           <h4>{t("footerNav")}</h4>
-          <Link to="/">{t("home")}</Link>
-          <Link to="/about">{t("about")}</Link>
-          <Link to="/products">{t("products")}</Link>
-          <Link to="/export">{t("export")}</Link>
-          <Link to="/branches">{t("branches")}</Link>
+
+          <Link to={langPrefix}>{t("home")}</Link>
+          <Link to={`${langPrefix}/about`}>{t("about")}</Link>
+          <Link to={`${langPrefix}/products`}>{t("products")}</Link>
+          <Link to={`${langPrefix}/export`}>{t("export")}</Link>
+          <Link to={`${langPrefix}/branches`}>{t("branches")}</Link>
         </div>
 
         <div className="footer-col">
           <h4>{t("footerFollow")}</h4>
-          <a target="_blank" href="https://www.facebook.com/share/1jgNPwnEZE/?mibextid=wwXIfr">{t("facebook")}</a>
+
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.facebook.com/share/1jgNPwnEZE/?mibextid=wwXIfr"
+          >
+            {t("facebook")}
+          </a>
         </div>
 
         <div className="footer-col">
           <h4>{t("footerContact")}</h4>
+
           <a
             href="https://wa.me/201023236000"
             target="_blank"
@@ -37,7 +49,10 @@ const Footer = () => {
           >
             {t("whatsapp")}
           </a>
-          <a href="/contact">{t("sendNow")}</a>
+
+          <Link to={`${langPrefix}/contact`}>
+            {t("sendNow")}
+          </Link>
         </div>
       </div>
 
