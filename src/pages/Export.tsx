@@ -20,21 +20,31 @@ import {
 } from "lucide-react";
 
 const Export = () => {
-  const { t } = useTranslation();
+  const { t ,i18n} = useTranslation();
 
   return (
     <>
       <NavBar />
       <LangBtn />
       <Helmet>
-        <title>Export | Alsafwa Factory</title>
+        <title>
+          {i18n.language === "ar"
+            ? "التصدير | مصنع الصفوة"
+            : "Export | Alsafwa Factory"}
+        </title>
+
         <meta
           name="description"
-          content="Learn more about Alsafwa Factory."
+          content={
+            i18n.language === "ar"
+              ? "تعرّف على خدمات التصدير العالمية التي يقدمها مصنع الصفوة ومنتجات الجبن عالية الجودة."
+              : "Learn about Alsafwa Factory's export services and premium processed cheese products for international markets."
+          }
         />
+
         <link
           rel="canonical"
-          href="https://alsafwafactory.vercel.app/about"
+          href={`https://alsafwafactory.com/${i18n.language}/export`}
         />
       </Helmet>
 

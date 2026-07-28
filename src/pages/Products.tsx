@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet-async";
 import products from "../Data/Products";
 
 const Products = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [searchParams] = useSearchParams();
 
@@ -32,16 +32,24 @@ const Products = () => {
       <LangBtn />
       <NavBar />
       <Helmet>
-        <title>Products | Alsafwa Factory</title>
+        <title>
+          {i18n.language === "ar"
+            ? "المنتجات | مصنع الصفوة"
+            : "Products | Alsafwa Factory"}
+        </title>
 
         <meta
           name="description"
-          content="Explore Alsafwa Factory's premium cheese products."
+          content={
+            i18n.language === "ar"
+              ? "اكتشف منتجات مصنع الصفوة من الجبن المطبوخ عالية الجودة."
+              : "Explore Alsafwa Factory's premium processed cheese products."
+          }
         />
 
         <link
           rel="canonical"
-          href="https://alsafwafactory.vercel.app/products"
+          href={`https://alsafwafactory.com/${i18n.language}/products`}
         />
       </Helmet>
 

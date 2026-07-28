@@ -7,20 +7,39 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t ,i18n} = useTranslation();
   return (
     <>
       <LangBtn />
       <NavBar />
       <Helmet>
-        <title>About | Alsafwa Factory</title>
+        <title>
+          {i18n.language === "ar"
+            ? "من نحن | مصنع الصفوة"
+            : "About | Alsafwa Factory"}
+        </title>
+
         <meta
           name="description"
-          content="Learn more about Alsafwa Factory."
+          content={
+            i18n.language === "ar"
+              ? "تعرف على مصنع الصفوة، أحد أبرز مصانع الجبن المطبوخ في مصر، والتزامه بالجودة والابتكار وخدمة الأسواق المحلية والعالمية."
+              : "Learn about Alsafwa Factory, a leading processed cheese manufacturer in Egypt, committed to quality, innovation, and serving local and international markets."
+          }
         />
+
+        <meta
+          name="keywords"
+          content={
+            i18n.language === "ar"
+              ? "من نحن, مصنع الصفوة, مصنع جبن, جبن مطبوخ, منتجات الألبان, الجودة, مصر, تصدير الجبن"
+              : "About Alsafwa Factory, cheese factory, processed cheese, dairy products, cheese manufacturer, Egypt, quality, cheese export"
+          }
+        />
+
         <link
           rel="canonical"
-          href="https://alsafwafactory.vercel.app/about"
+          href={`https://alsafwafactory.com/${i18n.language}/about`}
         />
       </Helmet>
       <div className="about-container">

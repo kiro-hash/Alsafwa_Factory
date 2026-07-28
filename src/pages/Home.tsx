@@ -42,14 +42,14 @@ const Home = () => {
 
         <meta
           name="keywords"
-          content="cheese, dairy, egypt, factory, mozzarella, cheddar, feta, export"
+          content="مصنع الصفوة, الصفوة, منتجات الجبن, جبن مطبوخ, جبنة مثلثات, جبنة شيدر, جبنة موزاريلا, منتجات الألبان, تصدير الجبن, مصنع جبن, مصر, Al Safwa Factory, Alsafwa Factory, cheese factory, processed cheese, triangle cheese, cheddar cheese, mozzarella cheese, dairy products, cheese export, Egypt"
         />
 
         <meta name="author" content="Alsafwa Factory" />
 
         <link
           rel="canonical"
-          href="https://alsafwafactory.vercel.app/"
+          href="https://alsafwafactory.com/"
         />
 
         <meta property="og:type" content="website" />
@@ -63,11 +63,11 @@ const Home = () => {
         />
         <meta
           property="og:image"
-          content="https://alsafwafactory.vercel.app/logo.png"
+          content="https://alsafwafactory.com/logo.png"
         />
         <meta
           property="og:url"
-          content="https://alsafwafactory.vercel.app/"
+          content="https://alsafwafactory.com/"
         />
         <meta
           property="og:site_name"

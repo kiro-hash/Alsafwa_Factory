@@ -11,7 +11,7 @@ const Contact = () => {
 
   const phoneNumber = "201023236000";
 
-  const { t } = useTranslation();
+  const { t ,i18n} = useTranslation();
 
   const sendToWhatsApp = () => {
     if (!message.trim()) {
@@ -31,14 +31,33 @@ const Contact = () => {
       <NavBar />
       <LangBtn />
       <Helmet>
-        <title>Contact | Alsafwa Factory</title>
+        <title>
+          {i18n.language === "ar"
+            ? "اتصل بنا | مصنع الصفوة"
+            : "Contact | Alsafwa Factory"}
+        </title>
+
         <meta
           name="description"
-          content="Learn more about Alsafwa Factory."
+          content={
+            i18n.language === "ar"
+              ? "تواصل مع مصنع الصفوة للاستفسارات، الشراكات، التصدير، وطلبات منتجات الجبن عالية الجودة."
+              : "Contact Alsafwa Factory for inquiries, partnerships, export opportunities, and premium processed cheese products."
+          }
         />
+
+        <meta
+          name="keywords"
+          content={
+            i18n.language === "ar"
+              ? "اتصل بمصنع الصفوة, تواصل معنا, مصنع الصفوة, مصنع جبن, منتجات الألبان, تصدير الجبن, مصر"
+              : "Contact Alsafwa Factory, contact us, cheese factory, dairy products, cheese export, Egypt"
+          }
+        />
+
         <link
           rel="canonical"
-          href="https://alsafwafactory.vercel.app/about"
+          href={`https://alsafwafactory.com/${i18n.language}/contact`}
         />
       </Helmet>
       <div className="contact-container">

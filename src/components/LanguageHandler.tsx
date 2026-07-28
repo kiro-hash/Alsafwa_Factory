@@ -9,8 +9,11 @@ export default function LanguageHandler() {
   useEffect(() => {
     if (lang === "ar" || lang === "en") {
       i18n.changeLanguage(lang);
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
     }
-  }, [lang]);
+  }, [lang, i18n]);
 
   return null;
 }
