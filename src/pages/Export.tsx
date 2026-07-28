@@ -20,17 +20,19 @@ import {
 } from "lucide-react";
 
 const Export = () => {
-  const { t ,i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <>
       <NavBar />
       <LangBtn />
       <Helmet>
+        <html lang={i18n.language} />
+
         <title>
           {i18n.language === "ar"
             ? "التصدير | مصنع الصفوة"
-            : "Export | Alsafwa Factory"}
+            : "Export | Al Safwa Factory"}
         </title>
 
         <meta
@@ -38,13 +40,66 @@ const Export = () => {
           content={
             i18n.language === "ar"
               ? "تعرّف على خدمات التصدير العالمية التي يقدمها مصنع الصفوة ومنتجات الجبن عالية الجودة."
-              : "Learn about Alsafwa Factory's export services and premium processed cheese products for international markets."
+              : "Learn about Al Safwa Factory's export services and premium processed cheese products for international markets."
           }
         />
 
         <link
           rel="canonical"
           href={`https://alsafwafactory.com/${i18n.language}/export`}
+        />
+
+        <link
+          rel="alternate"
+          hrefLang="ar"
+          href="https://alsafwafactory.com/ar/export"
+        />
+
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://alsafwafactory.com/en/export"
+        />
+
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://alsafwafactory.com/ar/export"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <meta
+          property="og:title"
+          content={
+            i18n.language === "ar"
+              ? "التصدير | مصنع الصفوة"
+              : "Export | Al Safwa Factory"
+          }
+        />
+
+        <meta
+          property="og:description"
+          content={
+            i18n.language === "ar"
+              ? "تعرّف على خدمات التصدير العالمية التي يقدمها مصنع الصفوة ومنتجات الجبن عالية الجودة."
+              : "Learn about Al Safwa Factory's export services and premium processed cheese products for international markets."
+          }
+        />
+
+        <meta
+          property="og:url"
+          content={`https://alsafwafactory.com/${i18n.language}/export`}
+        />
+
+        <meta
+          property="og:image"
+          content="https://alsafwafactory.com/logo.png"
+        />
+
+        <meta
+          property="og:site_name"
+          content="Al Safwa Factory"
         />
       </Helmet>
 

@@ -32,10 +32,12 @@ const Products = () => {
       <LangBtn />
       <NavBar />
       <Helmet>
+        <html lang={i18n.language} />
+
         <title>
           {i18n.language === "ar"
             ? "المنتجات | مصنع الصفوة"
-            : "Products | Alsafwa Factory"}
+            : "Products | Al Safwa Factory"}
         </title>
 
         <meta
@@ -43,13 +45,61 @@ const Products = () => {
           content={
             i18n.language === "ar"
               ? "اكتشف منتجات مصنع الصفوة من الجبن المطبوخ عالية الجودة."
-              : "Explore Alsafwa Factory's premium processed cheese products."
+              : "Explore Al Safwa Factory's premium processed cheese products."
           }
         />
 
         <link
           rel="canonical"
           href={`https://alsafwafactory.com/${i18n.language}/products`}
+        />
+
+        <link
+          rel="alternate"
+          hrefLang="ar"
+          href="https://alsafwafactory.com/ar/products"
+        />
+
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://alsafwafactory.com/en/products"
+        />
+
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://alsafwafactory.com/ar/products"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <meta
+          property="og:title"
+          content={
+            i18n.language === "ar"
+              ? "المنتجات | مصنع الصفوة"
+              : "Products | Al Safwa Factory"
+          }
+        />
+
+        <meta
+          property="og:description"
+          content={
+            i18n.language === "ar"
+              ? "اكتشف منتجات مصنع الصفوة من الجبن المطبوخ عالية الجودة."
+              : "Explore Al Safwa Factory's premium processed cheese products."
+          }
+        />
+
+        <meta
+          property="og:url"
+          content={`https://alsafwafactory.com/${i18n.language}/products`}
+        />
+
+        <meta
+          property="og:image"
+          content="https://alsafwafactory.com/logo.png"
         />
       </Helmet>
 

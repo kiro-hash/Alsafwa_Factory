@@ -7,16 +7,18 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
 const About = () => {
-  const { t ,i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <>
       <LangBtn />
       <NavBar />
       <Helmet>
+        <html lang={i18n.language} />
+
         <title>
           {i18n.language === "ar"
             ? "من نحن | مصنع الصفوة"
-            : "About | Alsafwa Factory"}
+            : "About | Al Safwa Factory"}
         </title>
 
         <meta
@@ -24,22 +26,66 @@ const About = () => {
           content={
             i18n.language === "ar"
               ? "تعرف على مصنع الصفوة، أحد أبرز مصانع الجبن المطبوخ في مصر، والتزامه بالجودة والابتكار وخدمة الأسواق المحلية والعالمية."
-              : "Learn about Alsafwa Factory, a leading processed cheese manufacturer in Egypt, committed to quality, innovation, and serving local and international markets."
-          }
-        />
-
-        <meta
-          name="keywords"
-          content={
-            i18n.language === "ar"
-              ? "من نحن, مصنع الصفوة, مصنع جبن, جبن مطبوخ, منتجات الألبان, الجودة, مصر, تصدير الجبن"
-              : "About Alsafwa Factory, cheese factory, processed cheese, dairy products, cheese manufacturer, Egypt, quality, cheese export"
+              : "Learn about Al Safwa Factory, a leading processed cheese manufacturer in Egypt, committed to quality, innovation, and serving local and international markets."
           }
         />
 
         <link
           rel="canonical"
           href={`https://alsafwafactory.com/${i18n.language}/about`}
+        />
+
+        <link
+          rel="alternate"
+          hrefLang="ar"
+          href="https://alsafwafactory.com/ar/about"
+        />
+
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://alsafwafactory.com/en/about"
+        />
+
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://alsafwafactory.com/ar/about"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <meta
+          property="og:title"
+          content={
+            i18n.language === "ar"
+              ? "من نحن | مصنع الصفوة"
+              : "About | Al Safwa Factory"
+          }
+        />
+
+        <meta
+          property="og:description"
+          content={
+            i18n.language === "ar"
+              ? "تعرف على مصنع الصفوة، أحد أبرز مصانع الجبن المطبوخ في مصر، والتزامه بالجودة والابتكار وخدمة الأسواق المحلية والعالمية."
+              : "Learn about Al Safwa Factory, a leading processed cheese manufacturer in Egypt, committed to quality, innovation, and serving local and international markets."
+          }
+        />
+
+        <meta
+          property="og:url"
+          content={`https://alsafwafactory.com/${i18n.language}/about`}
+        />
+
+        <meta
+          property="og:image"
+          content="https://alsafwafactory.com/logo.png"
+        />
+
+        <meta
+          property="og:site_name"
+          content="Al Safwa Factory"
         />
       </Helmet>
       <div className="about-container">

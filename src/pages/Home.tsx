@@ -27,7 +27,7 @@ const Home = () => {
 
       <NavBar />
       <Helmet>
-        <html lang={isRTL ? "ar" : "en"} />
+        <html lang={i18n.language} />
 
         <title>
           {i18n.language === "ar"
@@ -37,7 +37,11 @@ const Home = () => {
 
         <meta
           name="description"
-          content="Alsafwa Factory is a premium Egyptian cheese manufacturer producing high-quality dairy products for local and international markets."
+          content={
+            i18n.language === "ar"
+              ? "مصنع الصفوة لإنتاج الجبن المطبوخ ومنتجات الألبان عالية الجودة للأسواق المحلية والعالمية."
+              : "Al Safwa Factory is a premium Egyptian cheese manufacturer producing high-quality dairy products for local and international markets."
+          }
         />
 
         <meta
@@ -49,26 +53,57 @@ const Home = () => {
 
         <link
           rel="canonical"
-          href="https://alsafwafactory.com/"
+          href={`https://alsafwafactory.com/${i18n.language}`}
+        />
+
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://alsafwafactory.com/en"
+        />
+
+        <link
+          rel="alternate"
+          hrefLang="ar"
+          href="https://alsafwafactory.com/ar"
+        />
+
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://alsafwafactory.com/ar"
         />
 
         <meta property="og:type" content="website" />
+
         <meta
           property="og:title"
-          content="Alsafwa Factory"
+          content={
+            i18n.language === "ar"
+              ? "مصنع الصفوة"
+              : "Al Safwa Factory"
+          }
         />
+
         <meta
           property="og:description"
-          content="Premium Egyptian cheese manufacturer."
+          content={
+            i18n.language === "ar"
+              ? "مصنع الصفوة لإنتاج الجبن المطبوخ ومنتجات الألبان."
+              : "Premium Egyptian cheese manufacturer."
+          }
         />
+
         <meta
           property="og:image"
           content="https://alsafwafactory.com/logo.png"
         />
+
         <meta
           property="og:url"
-          content="https://alsafwafactory.com/"
+          content={`https://alsafwafactory.com/${i18n.language}`}
         />
+
         <meta
           property="og:site_name"
           content="Alsafwa Factory"
@@ -79,8 +114,8 @@ const Home = () => {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Alsafwa Factory",
-            url: "https://alsafwafactory.vercel.app",
-            logo: "https://alsafwafactory.vercel.app/logo.png",
+            url: "https://alsafwafactory.com",
+            logo: "https://alsafwafactory.com/logo.png",
           })}
         </script>
       </Helmet>
