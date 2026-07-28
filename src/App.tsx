@@ -4,6 +4,7 @@ import {
   Route,
   Routes,
   BrowserRouter,
+  Navigate,
 } from "react-router-dom";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -27,6 +28,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
+        <Route path="/" element={<Navigate to="/ar" replace />} />
         <Route path="/:lang" element={<Home />} />
         <Route path="/:lang/about" element={<About />} />
         <Route
