@@ -21,10 +21,18 @@ const Footer = () => {
           <h4>{t("footerNav")}</h4>
 
           <Link to={langPrefix}>{t("home")}</Link>
-          <Link to={`${langPrefix}/about`}>{t("about")}</Link>
-          <Link to={`${langPrefix}/products`}>{t("products")}</Link>
-          <Link to={`${langPrefix}/export`}>{t("export")}</Link>
-          <Link to={`${langPrefix}/branches`}>{t("branches")}</Link>
+          <Link to={`${langPrefix}/about`}>
+            {t("about")}
+          </Link>
+          <Link to={`${langPrefix}/products`}>
+            {t("products")}
+          </Link>
+          <Link to={`${langPrefix}/export`}>
+            {t("export")}
+          </Link>
+          <Link to={`${langPrefix}/branches`}>
+            {t("branches")}
+          </Link>
         </div>
 
         <div className="footer-col">
@@ -53,6 +61,16 @@ const Footer = () => {
           <Link to={`${langPrefix}/contact`}>
             {t("sendNow")}
           </Link>
+
+          <div className="call">
+            <h4>
+              <span>{t("or")}</span> {t("call")}
+            </h4>
+            <p>
+              01066673597<br/>
+              01023236000
+            </p>
+          </div>
         </div>
       </div>
 

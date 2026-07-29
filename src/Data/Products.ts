@@ -2,7 +2,6 @@ import p1 from "../assets/products/1.png";
 import p2 from "../assets/products/2.png";
 import p3 from "../assets/products/3.png";
 import p4 from "../assets/products/4.png";
-import p5 from "../assets/products/5.png";
 import p6 from "../assets/products/6.png";
 
 export interface Product {
@@ -42,12 +41,6 @@ const products: Product[] = [
     productImg: p4,
     productName: "Natural Block",
     productDesc: "Natural Block desc",
-  },
-  {
-    id: 6,
-    productImg: p5,
-    productName: "Flamenco Cheese",
-    productDesc: "Flamenco Cheese desc",
   },
 ];
 

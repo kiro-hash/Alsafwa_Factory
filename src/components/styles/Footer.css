@@ -122,6 +122,19 @@
   opacity: 0.65;
 }
 
+.call{
+  display: flex;
+  flex-direction: column;
+}
+
+.call h4 span{
+  font-size: large;
+}
+
+.call p{
+  font-weight: bold;
+}
+
 @media (max-width: 700px) {
   .footer {
     border-radius: 32px 32px 0 0;
